@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sensitive files
+*.env
+credentials*
+secret*
+
+# Temporary files
+*.tmp
+*.bak
+~$*
+
+# Large binary files (use assets/ for managed files)
+*.zip
+*.tar.gz
+*.rar
