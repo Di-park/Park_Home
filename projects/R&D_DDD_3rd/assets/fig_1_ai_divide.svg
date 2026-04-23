@@ -43,7 +43,7 @@
   <g filter="url(#shadow)">
     <rect x="350" y="110" width="500" height="90" rx="16" fill="url(#topGrad)"/>
     <text x="600" y="148" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">
-      생성형 AI 대중화 (2023~)
+      생성형 AI 대중화
     </text>
     <text x="600" y="178" font-size="15" fill="#E0E7FF" text-anchor="middle">
       ChatGPT · Claude · OpenClaw 등 보편적 생산성 도구로 확산
