@@ -131,8 +131,8 @@
     <text x="80" y="552" font-size="13" font-weight="600" fill="#1E293B">Premium 요금제</text>
     <text x="330" y="552" font-size="13" font-weight="700" fill="#10B981" text-anchor="end">55,000원/월</text>
 
-    <text x="80" y="579" font-size="13" font-weight="600" fill="#1E293B">CRM 문자 발송</text>
-    <text x="330" y="579" font-size="13" font-weight="700" fill="#10B981" text-anchor="end">+5원/건 마진</text>
+    <text x="80" y="579" font-size="13" font-weight="600" fill="#1E293B">CRM 문자 매출</text>
+    <text x="330" y="579" font-size="13" font-weight="700" fill="#10B981" text-anchor="end">250,000원/월</text>
 
     <text x="80" y="606" font-size="13" font-weight="600" fill="#1E293B">파트너 영업 수수료</text>
     <text x="330" y="606" font-size="13" font-weight="700" fill="#3B82F6" text-anchor="end">100,000원/계약</text>
@@ -144,17 +144,17 @@
     <rect x="840" y="460" width="300" height="40" rx="14" fill="#7C3AED"/>
     <text x="990" y="487" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">유닛 이코노믹스</text>
 
-    <text x="860" y="525" font-size="13" font-weight="600" fill="#1E293B">CAC (고객 획득 비용)</text>
-    <text x="1110" y="525" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="end">116,000원</text>
+    <text x="860" y="525" font-size="13" font-weight="600" fill="#1E293B">ARPU (월 매출/매장)</text>
+    <text x="1110" y="525" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="end">283,000원</text>
 
     <text x="860" y="552" font-size="13" font-weight="600" fill="#1E293B">LTV (고객 생애 가치)</text>
-    <text x="1110" y="552" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="end">1,584,000원</text>
+    <text x="1110" y="552" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="end">13,584,000원</text>
 
     <text x="860" y="579" font-size="13" font-weight="600" fill="#1E293B">LTV/CAC Ratio</text>
-    <text x="1110" y="579" font-size="13" font-weight="700" fill="#10B981" text-anchor="end">13.7x</text>
+    <text x="1110" y="579" font-size="13" font-weight="700" fill="#10B981" text-anchor="end">117x</text>
 
     <text x="860" y="606" font-size="13" font-weight="600" fill="#1E293B">BEP (손익분기점)</text>
-    <text x="1110" y="606" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="end">~1,000개 매장</text>
+    <text x="1110" y="606" font-size="13" font-weight="700" fill="#7C3AED" text-anchor="end">~300개 매장</text>
   </g>
 
   <!-- TOP RIGHT: Promo -->
