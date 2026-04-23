@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" font-family="'NanumGothic','Nanum Gothic','Noto Sans CJK KR',sans-serif">
+  <defs>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="chartBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAFAFA"/>
+      <stop offset="100%" stop-color="#F5F5F5"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="650" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="500" y="40" font-size="24" font-weight="700" fill="#1E293B" text-anchor="middle">육류 소비 vs 소상공인 매출 추이 비교</text>
+  <text x="500" y="68" font-size="14" fill="#64748B" text-anchor="middle">2019~2024년 | 소비는 증가하나 매출은 감소하는 역설</text>
+
+  <!-- Chart Area -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="100" width="840" height="400" rx="12" fill="url(#chartBg)" stroke="#E5E7EB" stroke-width="1"/>
+  </g>
+
+  <!-- Y-axis Left (육류 소비량) -->
+  <text x="60" y="135" font-size="10" fill="#10B981" text-anchor="end">65kg</text>
+  <text x="60" y="195" font-size="10" fill="#10B981" text-anchor="end">60kg</text>
+  <text x="60" y="255" font-size="10" fill="#10B981" text-anchor="end">55kg</text>
+  <text x="60" y="315" font-size="10" fill="#10B981" text-anchor="end">50kg</text>
+  <text x="60" y="375" font-size="10" fill="#10B981" text-anchor="end">45kg</text>
+  <text x="60" y="435" font-size="10" fill="#10B981" text-anchor="end">40kg</text>
+  <text x="50" y="285" font-size="11" fill="#10B981" text-anchor="middle" transform="rotate(-90, 30, 285)">1인당 육류 소비량 (kg)</text>
+
+  <!-- Y-axis Right (소상공인 매출) -->
+  <text x="940" y="135" font-size="10" fill="#EF4444" text-anchor="start">2.6억</text>
+  <text x="940" y="195" font-size="10" fill="#EF4444" text-anchor="start">2.4억</text>
+  <text x="940" y="255" font-size="10" fill="#EF4444" text-anchor="start">2.2억</text>
+  <text x="940" y="315" font-size="10" fill="#EF4444" text-anchor="start">2.0억</text>
+  <text x="940" y="375" font-size="10" fill="#EF4444" text-anchor="start">1.8억</text>
+  <text x="940" y="435" font-size="10" fill="#EF4444" text-anchor="start">1.6억</text>
+  <text x="970" y="285" font-size="11" fill="#EF4444" text-anchor="middle" transform="rotate(90, 970, 285)">소상공인 평균 매출 (원)</text>
+
+  <!-- Grid lines -->
+  <line x1="100" y1="130" x2="900" y2="130" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="190" x2="900" y2="190" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="250" x2="900" y2="250" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="310" x2="900" y2="310" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="370" x2="900" y2="370" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="430" x2="900" y2="430" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- X-axis labels -->
+  <text x="167" y="470" font-size="12" fill="#475569" text-anchor="middle">2019</text>
+  <text x="300" y="470" font-size="12" fill="#475569" text-anchor="middle">2020</text>
+  <text x="433" y="470" font-size="12" fill="#475569" text-anchor="middle">2021</text>
+  <text x="567" y="470" font-size="12" fill="#475569" text-anchor="middle">2022</text>
+  <text x="700" y="470" font-size="12" fill="#475569" text-anchor="middle">2023</text>
+  <text x="833" y="470" font-size="12" fill="#475569" text-anchor="middle">2024</text>
+
+  <!-- 육류 소비량 Line (Green) - Scale: 40kg=430, 65kg=130, range=300px for 25kg -->
+  <!-- 54.6kg: 430 - (54.6-40)/25*300 = 430 - 175.2 = 254.8 -->
+  <!-- 56.1kg: 430 - (56.1-40)/25*300 = 430 - 193.2 = 236.8 -->
+  <!-- 57.8kg: 430 - (57.8-40)/25*300 = 430 - 213.6 = 216.4 -->
+  <!-- 59.8kg: 430 - (59.8-40)/25*300 = 430 - 237.6 = 192.4 -->
+  <!-- 60.6kg: 430 - (60.6-40)/25*300 = 430 - 247.2 = 182.8 -->
+  <!-- 62.9kg: 430 - (62.9-40)/25*300 = 430 - 274.8 = 155.2 -->
+
+  <polyline points="167,255 300,237 433,216 567,192 700,183 833,155"
+            stroke="#10B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 육류 소비량 area fill -->
+  <polygon points="167,255 300,237 433,216 567,192 700,183 833,155 833,430 167,430"
+           fill="#10B981" fill-opacity="0.1"/>
+
+  <!-- 육류 소비량 Data points -->
+  <circle cx="167" cy="255" r="8" fill="#FFFFFF" stroke="#10B981" stroke-width="3"/>
+  <circle cx="300" cy="237" r="8" fill="#FFFFFF" stroke="#10B981" stroke-width="3"/>
+  <circle cx="433" cy="216" r="8" fill="#FFFFFF" stroke="#10B981" stroke-width="3"/>
+  <circle cx="567" cy="192" r="8" fill="#FFFFFF" stroke="#10B981" stroke-width="3"/>
+  <circle cx="700" cy="183" r="8" fill="#FFFFFF" stroke="#10B981" stroke-width="3"/>
+  <circle cx="833" cy="155" r="8" fill="#10B981" stroke="#10B981" stroke-width="3"/>
+
+  <!-- 육류 소비량 Data labels -->
+  <text x="167" y="240" font-size="11" font-weight="600" fill="#059669" text-anchor="middle">54.6</text>
+  <text x="300" y="222" font-size="11" font-weight="600" fill="#059669" text-anchor="middle">56.1</text>
+  <text x="433" y="201" font-size="11" font-weight="600" fill="#059669" text-anchor="middle">57.8</text>
+  <text x="567" y="177" font-size="11" font-weight="600" fill="#059669" text-anchor="middle">59.8</text>
+  <text x="700" y="168" font-size="11" font-weight="600" fill="#059669" text-anchor="middle">60.6</text>
+  <text x="833" y="140" font-size="11" font-weight="600" fill="#059669" text-anchor="middle">62.9</text>
+
+  <!-- 소상공인 매출 Line (Red) - Scale: 1.6억=430, 2.6억=130, range=300px for 1.0억 -->
+  <!-- 2.35억: 430 - (2.35-1.6)/1.0*300 = 430 - 225 = 205 -->
+  <!-- 2.24억: 430 - (2.24-1.6)/1.0*300 = 430 - 192 = 238 -->
+  <!-- 2.25억: 430 - (2.25-1.6)/1.0*300 = 430 - 195 = 235 -->
+  <!-- 2.34억: 430 - (2.34-1.6)/1.0*300 = 430 - 222 = 208 -->
+  <!-- 1.99억: 430 - (1.99-1.6)/1.0*300 = 430 - 117 = 313 -->
+  <!-- 1.97억: 430 - (1.97-1.6)/1.0*300 = 430 - 111 = 319 -->
+
+  <polyline points="167,205 300,238 433,235 567,208 700,313 833,319"
+            stroke="#EF4444" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 소상공인 매출 area fill -->
+  <polygon points="167,205 300,238 433,235 567,208 700,313 833,319 833,430 167,430"
+           fill="#EF4444" fill-opacity="0.1"/>
+
+  <!-- 소상공인 매출 Data points -->
+  <circle cx="167" cy="205" r="8" fill="#FFFFFF" stroke="#EF4444" stroke-width="3"/>
+  <circle cx="300" cy="238" r="8" fill="#FFFFFF" stroke="#EF4444" stroke-width="3"/>
+  <circle cx="433" cy="235" r="8" fill="#FFFFFF" stroke="#EF4444" stroke-width="3"/>
+  <circle cx="567" cy="208" r="8" fill="#FFFFFF" stroke="#EF4444" stroke-width="3"/>
+  <circle cx="700" cy="313" r="8" fill="#FFFFFF" stroke="#EF4444" stroke-width="3"/>
+  <circle cx="833" cy="319" r="8" fill="#EF4444" stroke="#EF4444" stroke-width="3"/>
+
+  <!-- 소상공인 매출 Data labels -->
+  <text x="167" y="195" font-size="11" font-weight="600" fill="#DC2626" text-anchor="middle">2.35억</text>
+  <text x="300" y="255" font-size="11" font-weight="600" fill="#DC2626" text-anchor="middle">2.24억</text>
+  <text x="433" y="252" font-size="11" font-weight="600" fill="#DC2626" text-anchor="middle">2.25억</text>
+  <text x="567" y="198" font-size="11" font-weight="600" fill="#DC2626" text-anchor="middle">2.34억</text>
+  <text x="700" y="333" font-size="11" font-weight="600" fill="#DC2626" text-anchor="middle">1.99억</text>
+  <text x="833" y="339" font-size="11" font-weight="600" fill="#DC2626" text-anchor="middle">1.97억</text>
+
+  <!-- Divergence Arrow -->
+  <path d="M 750 250 Q 780 220 810 190" stroke="#7C3AED" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <defs>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#7C3AED"/>
+    </marker>
+  </defs>
+
+  <!-- Divergence Label -->
+  <rect x="720" y="205" width="100" height="35" rx="6" fill="#7C3AED"/>
+  <text x="770" y="220" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">격차 확대</text>
+  <text x="770" y="234" font-size="9" fill="#E9D5FF" text-anchor="middle">(Scissors Effect)</text>
+
+  <!-- Legend -->
+  <g transform="translate(120, 510)">
+    <rect x="0" y="0" width="360" height="50" rx="8" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+
+    <line x1="20" y1="25" x2="50" y2="25" stroke="#10B981" stroke-width="3"/>
+    <circle cx="35" cy="25" r="5" fill="#10B981"/>
+    <text x="60" y="29" font-size="12" fill="#475569">1인당 육류 소비량 (kg)</text>
+    <text x="185" y="29" font-size="12" font-weight="700" fill="#10B981">+15% ↑</text>
+
+    <line x1="230" y1="25" x2="260" y2="25" stroke="#EF4444" stroke-width="3"/>
+    <circle cx="245" cy="25" r="5" fill="#EF4444"/>
+    <text x="270" y="29" font-size="12" fill="#475569">소상공인 매출</text>
+    <text x="340" y="29" font-size="12" font-weight="700" fill="#EF4444">-16% ↓</text>
+  </g>
+
+  <!-- Insight Box -->
+  <g transform="translate(520, 510)">
+    <rect x="0" y="0" width="360" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="25" font-size="13" font-weight="700" fill="#92400E">💡 인사이트</text>
+    <text x="20" y="48" font-size="11" fill="#78350F">• 소비자는 더 많은 육류를 소비하지만</text>
+    <text x="20" y="66" font-size="11" fill="#78350F">• 소상공인(정육점 포함)은 매출 감소 중</text>
+    <text x="20" y="88" font-size="11" font-weight="600" fill="#B45309">→ 대형마트/온라인으로 소비 이동, 동네 정육점 위기</text>
+  </g>
+
+  <!-- Source -->
+  <text x="500" y="635" font-size="9" fill="#94A3B8" text-anchor="middle">출처: 중소벤처기업부 소상공인실태조사(2019-2024), 한국육류유통수출협회, 농림축산식품부</text>
+
+</svg>
