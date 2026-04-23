@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs>
+    <linearGradient id="tamGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <linearGradient id="samGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DDD6FE"/>
+      <stop offset="100%" stop-color="#C4B5FD"/>
+    </linearGradient>
+    <linearGradient id="somGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#5B21B6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <filter id="shadowSmall" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="600" y="50" font-size="28" font-weight="700" fill="#1E293B" text-anchor="middle">
+    시장 규모 (TAM-SAM-SOM)
+  </text>
+  <text x="600" y="82" font-size="15" fill="#64748B" text-anchor="middle">
+    소상공인 AI 고객관리 에이전트 시장
+  </text>
+
+  <!-- TAM Circle (Outermost) -->
+  <g filter="url(#shadow)">
+    <ellipse cx="480" cy="420" rx="340" ry="280" fill="url(#tamGrad)" stroke="#818CF8" stroke-width="3"/>
+  </g>
+
+  <!-- SAM Circle (Middle) -->
+  <g filter="url(#shadowSmall)">
+    <ellipse cx="480" cy="450" rx="220" ry="180" fill="url(#samGrad)" stroke="#A78BFA" stroke-width="2.5"/>
+  </g>
+
+  <!-- SOM Circle (Innermost) -->
+  <g filter="url(#shadowSmall)">
+    <ellipse cx="480" cy="480" rx="120" ry="100" fill="url(#somGrad)" stroke="#7C3AED" stroke-width="2"/>
+  </g>
+
+  <!-- TAM Label -->
+  <text x="480" y="180" font-size="22" font-weight="700" fill="#4338CA" text-anchor="middle">TAM</text>
+  <text x="480" y="208" font-size="32" font-weight="800" fill="#4338CA" text-anchor="middle">약 7조원</text>
+  <text x="480" y="235" font-size="13" fill="#6366F1" text-anchor="middle">전체 B2C 소상공인</text>
+  <text x="480" y="255" font-size="13" fill="#6366F1" text-anchor="middle">(음식점·소매·미용·서비스)</text>
+
+  <!-- SAM Label -->
+  <text x="480" y="320" font-size="18" font-weight="700" fill="#7C3AED" text-anchor="middle">SAM</text>
+  <text x="480" y="348" font-size="26" font-weight="800" fill="#7C3AED" text-anchor="middle">약 1조원</text>
+  <text x="480" y="375" font-size="12" fill="#8B5CF6" text-anchor="middle">식품 관련 소매·외식</text>
+
+  <!-- SOM Label -->
+  <text x="480" y="460" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">SOM</text>
+  <text x="480" y="490" font-size="24" font-weight="800" fill="#FFFFFF" text-anchor="middle">2,200억원</text>
+  <text x="480" y="518" font-size="11" fill="#E9D5FF" text-anchor="middle">정육점 시장</text>
+
+  <!-- Right Side: Detail Boxes -->
+
+  <!-- TAM Detail -->
+  <g filter="url(#shadowSmall)">
+    <rect x="870" y="130" width="280" height="140" rx="12" fill="#FFFFFF" stroke="#818CF8" stroke-width="2"/>
+    <rect x="870" y="130" width="280" height="36" rx="12" fill="#4338CA"/>
+    <text x="1010" y="155" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">TAM (Total Addressable Market)</text>
+
+    <text x="890" y="190" font-size="12" fill="#475569">• 전체 소상공인: 613만개</text>
+    <text x="890" y="212" font-size="12" fill="#475569">• B2C 재방문 기반 업종: ~300만개</text>
+    <text x="890" y="234" font-size="12" fill="#475569">• 평균 연매출 2.5억 × CRM 1%</text>
+    <text x="890" y="256" font-size="13" font-weight="700" fill="#4338CA">= 약 7조원</text>
+  </g>
+
+  <!-- SAM Detail -->
+  <g filter="url(#shadowSmall)">
+    <rect x="870" y="290" width="280" height="140" rx="12" fill="#FFFFFF" stroke="#A78BFA" stroke-width="2"/>
+    <rect x="870" y="290" width="280" height="36" rx="12" fill="#7C3AED"/>
+    <text x="1010" y="315" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">SAM (Serviceable Addressable)</text>
+
+    <text x="890" y="350" font-size="12" fill="#475569">• 음식점: ~70만개</text>
+    <text x="890" y="372" font-size="12" fill="#475569">• 식품소매: ~20만개 (정육·반찬·청과·마트)</text>
+    <text x="890" y="394" font-size="12" fill="#475569">• 평균 연매출 × CRM 1%</text>
+    <text x="890" y="416" font-size="13" font-weight="700" fill="#7C3AED">= 약 1조원</text>
+  </g>
+
+  <!-- SOM Detail -->
+  <g filter="url(#shadowSmall)">
+    <rect x="870" y="450" width="280" height="140" rx="12" fill="#FFFFFF" stroke="#5B21B6" stroke-width="2"/>
+    <rect x="870" y="450" width="280" height="36" rx="12" fill="#5B21B6"/>
+    <text x="1010" y="475" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">SOM (Serviceable Obtainable)</text>
+
+    <text x="890" y="510" font-size="12" fill="#475569">• 정육점: 57,783개</text>
+    <text x="890" y="532" font-size="12" fill="#475569">• 평균 연매출: 3.8억원</text>
+    <text x="890" y="554" font-size="12" fill="#475569">• CRM 지출: 1%</text>
+    <text x="890" y="576" font-size="13" font-weight="700" fill="#5B21B6">= 약 2,200억원</text>
+  </g>
+
+  <!-- Connecting Lines -->
+  <path d="M 820 200 L 865 200" stroke="#818CF8" stroke-width="2" stroke-dasharray="4,3"/>
+  <path d="M 700 380 L 865 360" stroke="#A78BFA" stroke-width="2" stroke-dasharray="4,3"/>
+  <path d="M 600 500 L 865 520" stroke="#5B21B6" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Bottom: Key Insight -->
+  <g filter="url(#shadowSmall)">
+    <rect x="100" y="660" width="1000" height="60" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="600" y="698" font-size="14" fill="#475569" text-anchor="middle">
+      <tspan font-weight="700" fill="#5B21B6">SOM(정육점)</tspan>에서 시작 →
+      <tspan font-weight="700" fill="#7C3AED">SAM(식품소매·외식)</tspan>으로 확장 →
+      <tspan font-weight="700" fill="#4338CA">TAM(전체 소상공인)</tspan>으로 스케일업
+    </text>
+  </g>
+
+  <!-- Source Note -->
+  <text x="600" y="738" font-size="10" fill="#94A3B8" text-anchor="middle">
+    출처: 중소벤처기업부 소상공인실태조사(2024), 한식산업실태조사(2024), 통계청 서비스업조사
+  </text>
+</svg>
