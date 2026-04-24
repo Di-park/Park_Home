@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" font-family="'NanumGothic','Nanum Gothic','Noto Sans CJK KR',sans-serif">
+  <defs>
+    <linearGradient id="engineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <linearGradient id="targetGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="personalGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="timingGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="infraGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <filter id="shadowSmall" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="850" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="600" y="45" font-size="28" font-weight="700" fill="#1E293B" text-anchor="middle">
+    AI 에이전트 시스템 구조
+  </text>
+  <text x="600" y="75" font-size="14" fill="#64748B" text-anchor="middle">
+    본 과제 개발 범위 및 기 구축 시스템 연동 체계
+  </text>
+
+  <!-- Main Engine Container (본 과제) -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="110" width="1040" height="420" rx="24" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+
+    <!-- Header -->
+    <rect x="80" y="110" width="1040" height="70" rx="24" fill="url(#engineGrad)"/>
+    <rect x="80" y="156" width="1040" height="24" fill="url(#engineGrad)"/>
+
+    <text x="600" y="150" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      AI 에이전트 핵심 의사결정 엔진 (본 과제)
+    </text>
+    <text x="600" y="172" font-size="13" fill="#DDD6FE" text-anchor="middle">
+      "누구에게 · 무엇을 · 언제" 자동 판단 체계
+    </text>
+  </g>
+
+  <!-- Badge: 본 과제 -->
+  <rect x="95" y="95" width="80" height="28" rx="14" fill="#7C3AED"/>
+  <text x="135" y="114" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">본 과제</text>
+
+  <!-- Three Engine Cards -->
+
+  <!-- 1. Target Extraction Engine -->
+  <g filter="url(#shadowSmall)">
+    <rect x="120" y="210" width="300" height="290" rx="16" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+
+    <!-- Card Header -->
+    <rect x="120" y="210" width="300" height="55" rx="16" fill="url(#targetGrad)"/>
+    <rect x="120" y="249" width="300" height="16" fill="url(#targetGrad)"/>
+
+    <!-- Question Badge -->
+    <rect x="140" y="225" width="90" height="26" rx="13" fill="rgba(255,255,255,0.2)"/>
+    <text x="185" y="243" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">누구에게</text>
+
+    <text x="270" y="253" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">타겟 추출 엔진</text>
+
+    <!-- Content -->
+    <text x="270" y="295" font-size="14" font-weight="600" fill="#1E40AF" text-anchor="middle">이탈 예측 모형</text>
+
+    <circle cx="145" cy="330" r="6" fill="#3B82F6"/>
+    <text x="160" y="335" font-size="13" fill="#475569">이탈 위험 고객 자동 식별</text>
+
+    <circle cx="145" cy="365" r="6" fill="#3B82F6"/>
+    <text x="160" y="370" font-size="13" fill="#475569">고객별 맞춤 이탈 기준 도출</text>
+
+    <circle cx="145" cy="400" r="6" fill="#3B82F6"/>
+    <text x="160" y="405" font-size="13" fill="#475569">재구매 확률 예측</text>
+
+    <circle cx="145" cy="435" r="6" fill="#3B82F6"/>
+    <text x="160" y="440" font-size="13" fill="#475569">RF 이중모형 자동 재학습</text>
+
+    <!-- Tech Badge -->
+    <rect x="140" y="460" width="260" height="26" rx="13" fill="#EFF6FF"/>
+    <text x="270" y="478" font-size="11" font-weight="600" fill="#1D4ED8" text-anchor="middle">Random Forest · 월 1회 자동 재학습</text>
+  </g>
+
+  <!-- 2. Personalization Engine -->
+  <g filter="url(#shadowSmall)">
+    <rect x="450" y="210" width="300" height="290" rx="16" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+
+    <!-- Card Header -->
+    <rect x="450" y="210" width="300" height="55" rx="16" fill="url(#personalGrad)"/>
+    <rect x="450" y="249" width="300" height="16" fill="url(#personalGrad)"/>
+
+    <!-- Question Badge -->
+    <rect x="470" y="225" width="75" height="26" rx="13" fill="rgba(255,255,255,0.2)"/>
+    <text x="507" y="243" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">무엇을</text>
+
+    <text x="600" y="253" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">개인화 생성 엔진</text>
+
+    <!-- Content -->
+    <text x="600" y="295" font-size="14" font-weight="600" fill="#047857" text-anchor="middle">LLM 개인화 문구 생성</text>
+
+    <circle cx="475" cy="330" r="6" fill="#10B981"/>
+    <text x="490" y="335" font-size="13" fill="#475569">파편 데이터 통합 활용</text>
+
+    <circle cx="475" cy="365" r="6" fill="#10B981"/>
+    <text x="490" y="370" font-size="13" fill="#475569">구매이력·방문주기·선호부위</text>
+
+    <circle cx="475" cy="400" r="6" fill="#10B981"/>
+    <text x="490" y="405" font-size="13" fill="#475569">가구단위·계절·명절 반영</text>
+
+    <circle cx="475" cy="435" r="6" fill="#10B981"/>
+    <text x="490" y="440" font-size="13" fill="#475569">1:1 맞춤 메시지 자동 생성</text>
+
+    <!-- Tech Badge -->
+    <rect x="470" y="460" width="260" height="26" rx="13" fill="#ECFDF5"/>
+    <text x="600" y="478" font-size="11" font-weight="600" fill="#059669" text-anchor="middle">LLM · 화이트리스트 프롬프트 엔진</text>
+  </g>
+
+  <!-- 3. Timing Optimization Engine -->
+  <g filter="url(#shadowSmall)">
+    <rect x="780" y="210" width="300" height="290" rx="16" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+
+    <!-- Card Header -->
+    <rect x="780" y="210" width="300" height="55" rx="16" fill="url(#timingGrad)"/>
+    <rect x="780" y="249" width="300" height="16" fill="url(#timingGrad)"/>
+
+    <!-- Question Badge -->
+    <rect x="800" y="225" width="60" height="26" rx="13" fill="rgba(255,255,255,0.2)"/>
+    <text x="830" y="243" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">언제</text>
+
+    <text x="930" y="253" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">발송 최적화 엔진</text>
+
+    <!-- Content -->
+    <text x="930" y="295" font-size="14" font-weight="600" fill="#B45309" text-anchor="middle">최적 발송 시점 판단</text>
+
+    <circle cx="805" cy="330" r="6" fill="#F59E0B"/>
+    <text x="820" y="335" font-size="13" fill="#475569">고객별 반응률 분석</text>
+
+    <circle cx="805" cy="365" r="6" fill="#F59E0B"/>
+    <text x="820" y="370" font-size="13" fill="#475569">요일·시간대별 최적화</text>
+
+    <circle cx="805" cy="400" r="6" fill="#F59E0B"/>
+    <text x="820" y="405" font-size="13" fill="#475569">구매 주기 기반 타이밍</text>
+
+    <circle cx="805" cy="435" r="6" fill="#F59E0B"/>
+    <text x="820" y="440" font-size="13" fill="#475569">자동 스케줄링 파이프라인</text>
+
+    <!-- Tech Badge -->
+    <rect x="800" y="460" width="260" height="26" rx="13" fill="#FFFBEB"/>
+    <text x="930" y="478" font-size="11" font-weight="600" fill="#D97706" text-anchor="middle">시계열 분석 · 자동 스케줄러</text>
+  </g>
+
+  <!-- Connection Arrow -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6D28D9"/>
+    </marker>
+  </defs>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="540" x2="600" y2="590" stroke="#6D28D9" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="545" y="555" width="110" height="24" rx="12" fill="#F5F3FF"/>
+  <text x="600" y="572" font-size="12" font-weight="600" fill="#6D28D9" text-anchor="middle">연동</text>
+
+  <!-- Infrastructure Container (Pre-R&D) -->
+  <g filter="url(#shadow)">
+    <rect x="180" y="610" width="840" height="150" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+
+    <!-- Header -->
+    <rect x="180" y="610" width="840" height="50" rx="20" fill="url(#infraGrad)"/>
+    <rect x="180" y="640" width="840" height="20" fill="url(#infraGrad)"/>
+
+    <text x="600" y="642" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      기 구축 시스템 (Pre-R&amp;D) - 데이터 수집 및 실행 인프라
+    </text>
+  </g>
+
+  <!-- Badge: 기 구축 -->
+  <rect x="195" y="595" width="80" height="28" rx="14" fill="#64748B"/>
+  <text x="235" y="614" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">기 구축</text>
+
+  <!-- Infrastructure Flow -->
+  <g>
+    <!-- POS 연동 -->
+    <rect x="220" y="680" width="180" height="55" rx="12" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="310" y="712" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">POS 데이터 연동</text>
+
+    <!-- Arrow -->
+    <line x1="410" y1="707" x2="450" y2="707" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- 방문 변화율 산출 -->
+    <rect x="460" y="680" width="200" height="55" rx="12" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="560" y="712" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">방문 변화율 산출</text>
+
+    <!-- Arrow -->
+    <line x1="670" y1="707" x2="710" y2="707" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- 문구 발송 시스템 -->
+    <rect x="720" y="680" width="180" height="55" rx="12" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="810" y="712" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">문구 발송 시스템</text>
+  </g>
+
+  <!-- Bottom Summary -->
+  <g>
+    <rect x="180" y="790" width="840" height="45" rx="12" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1.5"/>
+    <text x="600" y="818" font-size="14" font-weight="600" fill="#6D28D9" text-anchor="middle">
+      본 과제 완료 시 → "사장님이 아무것도 하지 않아도 AI가 고객을 분석하고 마케팅을 자동 집행"하는 Zero-Task AI 에이전트 완성
+    </text>
+  </g>
+
+</svg>
