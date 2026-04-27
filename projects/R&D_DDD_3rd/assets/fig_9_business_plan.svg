@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="'NanumGothic','Nanum Gothic','Noto Sans CJK KR',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="'NanumGothic','Nanum Gothic','Noto Sans CJK KR',sans-serif">
   <defs>
     <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#4F46E5"/>
@@ -13,6 +13,10 @@
       <stop offset="0%" stop-color="#10B981"/>
       <stop offset="100%" stop-color="#059669"/>
     </linearGradient>
+    <linearGradient id="purpleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
     <linearGradient id="orangeGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#F59E0B"/>
       <stop offset="100%" stop-color="#D97706"/>
@@ -20,233 +24,271 @@
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.1"/>
     </filter>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8"/>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B5CF6"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#F59E0B"/>
     </marker>
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="700" fill="#F8FAFC"/>
+  <rect width="1200" height="750" fill="#F8FAFC"/>
 
   <!-- Title -->
   <rect x="0" y="0" width="1200" height="55" fill="url(#headerGrad)"/>
   <text x="600" y="35" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">사업화 목표 및 계획</text>
 
   <!-- Section 1: Market Opportunity -->
-  <g transform="translate(30, 75)">
-    <rect x="0" y="0" width="370" height="280" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="370" height="45" rx="12" fill="url(#blueGrad)"/>
-    <rect x="0" y="33" width="370" height="12" fill="url(#blueGrad)"/>
-    <text x="185" y="30" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">정육점 시장 기회</text>
+  <g transform="translate(30, 80)">
+    <rect x="0" y="0" width="220" height="240" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="220" height="42" rx="12" fill="url(#blueGrad)"/>
+    <rect x="0" y="30" width="220" height="12" fill="url(#blueGrad)"/>
+    <text x="110" y="28" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">정육점 시장 기회</text>
 
-    <!-- Market Size -->
-    <text x="185" y="85" font-size="42" font-weight="700" fill="#3B82F6" text-anchor="middle">57,000</text>
-    <text x="185" y="110" font-size="13" fill="#64748B" text-anchor="middle">국내 정육점 수</text>
+    <text x="110" y="80" font-size="36" font-weight="700" fill="#3B82F6" text-anchor="middle">57,000</text>
+    <text x="110" y="100" font-size="12" fill="#64748B" text-anchor="middle">국내 정육점 수</text>
 
-    <line x1="30" y1="130" x2="340" y2="130" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="20" y1="115" x2="200" y2="115" stroke="#E2E8F0" stroke-width="1"/>
 
-    <!-- Why Butcher Shop -->
-    <text x="30" y="155" font-size="12" font-weight="600" fill="#1E293B">왜 정육점인가?</text>
+    <circle cx="30" cy="138" r="4" fill="#3B82F6"/>
+    <text x="42" y="142" font-size="10" fill="#475569">플랫폼 미진입 블루오션</text>
 
-    <circle cx="45" cy="180" r="6" fill="#3B82F6"/>
-    <text x="60" y="184" font-size="11" fill="#475569">대형 플랫폼(배민, 쿠팡이츠) 미진입 블루오션</text>
+    <circle cx="30" cy="162" r="4" fill="#3B82F6"/>
+    <text x="42" y="166" font-size="10" fill="#475569">데이터 비종속 구조</text>
 
-    <circle cx="45" cy="205" r="6" fill="#3B82F6"/>
-    <text x="60" y="209" font-size="11" fill="#475569">고객 데이터가 플랫폼에 종속되지 않음</text>
+    <circle cx="30" cy="186" r="4" fill="#3B82F6"/>
+    <text x="42" y="190" font-size="10" fill="#475569">오프라인 POS 기반</text>
 
-    <circle cx="45" cy="230" r="6" fill="#3B82F6"/>
-    <text x="60" y="234" font-size="11" fill="#475569">오프라인 대면 판매 + POS 기반 결제 주류</text>
-
-    <circle cx="45" cy="255" r="6" fill="#3B82F6"/>
-    <text x="60" y="259" font-size="11" fill="#475569">독립 AI 솔루션이 가치 창출 가능한 구조적 공백</text>
+    <circle cx="30" cy="210" r="4" fill="#3B82F6"/>
+    <text x="42" y="214" font-size="10" fill="#475569">AI 솔루션 구조적 공백</text>
   </g>
 
-  <!-- Arrow 1 -->
-  <line x1="410" y1="215" x2="440" y2="215" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Arrows from Market to Two Paths -->
+  <!-- Upper arrow -->
+  <path d="M 250 150 Q 280 150 290 120 L 310 95" stroke="#3B82F6" stroke-width="3" fill="none" marker-end="url(#arrowBlue)"/>
+  <!-- Lower arrow -->
+  <path d="M 250 250 Q 280 250 290 280 L 310 305" stroke="#10B981" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
 
-  <!-- Section 2: Product Features -->
-  <g transform="translate(450, 75)">
-    <rect x="0" y="0" width="300" height="280" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="300" height="45" rx="12" fill="url(#greenGrad)"/>
-    <rect x="0" y="33" width="300" height="12" fill="url(#greenGrad)"/>
-    <text x="150" y="30" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">제품 핵심 기능</text>
+  <!-- Section 2A: Core Product Features (Top) -->
+  <g transform="translate(320, 80)">
+    <rect x="0" y="0" width="280" height="160" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="280" height="42" rx="12" fill="url(#blueGrad)"/>
+    <rect x="0" y="30" width="280" height="12" fill="url(#blueGrad)"/>
+    <text x="140" y="28" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">제품 핵심 기능 개발</text>
 
-    <!-- Feature 1 -->
-    <g transform="translate(20, 60)">
-      <rect x="0" y="0" width="260" height="48" rx="8" fill="#EEF2FF"/>
-      <circle cx="24" cy="24" r="16" fill="#4F46E5"/>
-      <text x="24" y="29" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
-      <text x="50" y="18" font-size="11" font-weight="600" fill="#1E293B">AI 이탈 예측 엔진</text>
-      <text x="50" y="35" font-size="10" fill="#64748B">RF1/RF2 이중 모델 - 고객별 이탈 위험도 산출</text>
+    <g transform="translate(15, 52)">
+      <circle cx="12" cy="12" r="10" fill="#DBEAFE"/>
+      <text x="12" y="16" font-size="9" font-weight="700" fill="#1D4ED8" text-anchor="middle">1</text>
+      <text x="30" y="16" font-size="10" font-weight="600" fill="#1E293B">AI 이탈 예측 엔진 (RF1/RF2)</text>
     </g>
 
-    <!-- Feature 2 -->
-    <g transform="translate(20, 115)">
-      <rect x="0" y="0" width="260" height="48" rx="8" fill="#ECFDF5"/>
-      <circle cx="24" cy="24" r="16" fill="#059669"/>
-      <text x="24" y="29" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
-      <text x="50" y="18" font-size="11" font-weight="600" fill="#1E293B">LLM 개인화 문자 생성</text>
-      <text x="50" y="35" font-size="10" fill="#64748B">구매이력/방문주기/선호부위 반영 맞춤 문자</text>
+    <g transform="translate(15, 78)">
+      <circle cx="12" cy="12" r="10" fill="#DBEAFE"/>
+      <text x="12" y="16" font-size="9" font-weight="700" fill="#1D4ED8" text-anchor="middle">2</text>
+      <text x="30" y="16" font-size="10" font-weight="600" fill="#1E293B">LLM 개인화 문자 생성</text>
     </g>
 
-    <!-- Feature 3 -->
-    <g transform="translate(20, 170)">
-      <rect x="0" y="0" width="260" height="48" rx="8" fill="#FEF3C7"/>
-      <circle cx="24" cy="24" r="16" fill="#D97706"/>
-      <text x="24" y="29" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
-      <text x="50" y="18" font-size="11" font-weight="600" fill="#1E293B">자동 발송 및 반응 추적</text>
-      <text x="50" y="35" font-size="10" fill="#64748B">최적 타이밍 발송 + 재방문/재구매 성과 측정</text>
+    <g transform="translate(15, 104)">
+      <circle cx="12" cy="12" r="10" fill="#DBEAFE"/>
+      <text x="12" y="16" font-size="9" font-weight="700" fill="#1D4ED8" text-anchor="middle">3</text>
+      <text x="30" y="16" font-size="10" font-weight="600" fill="#1E293B">자동 발송 및 반응 추적</text>
     </g>
 
-    <!-- Feature 4 -->
-    <g transform="translate(20, 225)">
-      <rect x="0" y="0" width="260" height="48" rx="8" fill="#FEE2E2"/>
-      <circle cx="24" cy="24" r="16" fill="#DC2626"/>
-      <text x="24" y="29" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
-      <text x="50" y="18" font-size="11" font-weight="600" fill="#1E293B">월 1회 자동 재학습</text>
-      <text x="50" y="35" font-size="10" fill="#64748B">매장별 데이터 기반 모델 지속 개선</text>
+    <g transform="translate(15, 130)">
+      <circle cx="12" cy="12" r="10" fill="#DBEAFE"/>
+      <text x="12" y="16" font-size="9" font-weight="700" fill="#1D4ED8" text-anchor="middle">4</text>
+      <text x="30" y="16" font-size="10" font-weight="600" fill="#1E293B">월 1회 자동 재학습 시스템</text>
     </g>
   </g>
 
-  <!-- Arrow 2 -->
-  <line x1="760" y1="215" x2="790" y2="215" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Section 2B: Field UX Optimization (Bottom) -->
+  <g transform="translate(320, 260)">
+    <rect x="0" y="0" width="280" height="160" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="280" height="42" rx="12" fill="url(#greenGrad)"/>
+    <rect x="0" y="30" width="280" height="12" fill="url(#greenGrad)"/>
+    <text x="140" y="28" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">현장 사용성 최적화 S/W</text>
 
-  <!-- Section 3: Expected Outcomes -->
-  <g transform="translate(800, 75)">
-    <rect x="0" y="0" width="370" height="280" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="370" height="45" rx="12" fill="url(#orangeGrad)"/>
-    <rect x="0" y="33" width="370" height="12" fill="url(#orangeGrad)"/>
-    <text x="185" y="30" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">예상 성과</text>
-
-    <!-- Outcome 1 -->
-    <g transform="translate(20, 60)">
-      <rect x="0" y="0" width="155" height="70" rx="8" fill="#DBEAFE"/>
-      <text x="78" y="25" font-size="11" fill="#64748B" text-anchor="middle">재방문율</text>
-      <text x="78" y="52" font-size="24" font-weight="700" fill="#1D4ED8" text-anchor="middle">+15%</text>
+    <g transform="translate(15, 52)">
+      <circle cx="12" cy="12" r="10" fill="#D1FAE5"/>
+      <text x="12" y="16" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">1</text>
+      <text x="30" y="16" font-size="10" font-weight="600" fill="#1E293B">디지털 취약계층 UX 설계</text>
     </g>
 
-    <!-- Outcome 2 -->
-    <g transform="translate(190, 60)">
-      <rect x="0" y="0" width="155" height="70" rx="8" fill="#D1FAE5"/>
-      <text x="78" y="25" font-size="11" fill="#64748B" text-anchor="middle">특정 부위 매출</text>
-      <text x="78" y="52" font-size="24" font-weight="700" fill="#059669" text-anchor="middle">+10%</text>
+    <g transform="translate(15, 78)">
+      <circle cx="12" cy="12" r="10" fill="#D1FAE5"/>
+      <text x="12" y="16" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">2</text>
+      <text x="30" y="16" font-size="10" font-weight="600" fill="#1E293B">사장님 대시보드 (추천→승인)</text>
     </g>
 
-    <!-- Outcome 3 -->
-    <g transform="translate(20, 140)">
-      <rect x="0" y="0" width="155" height="70" rx="8" fill="#FEF3C7"/>
-      <text x="78" y="25" font-size="11" fill="#64748B" text-anchor="middle">메시지 반응률</text>
-      <text x="78" y="52" font-size="24" font-weight="700" fill="#D97706" text-anchor="middle">+20%</text>
+    <g transform="translate(15, 104)">
+      <circle cx="12" cy="12" r="10" fill="#D1FAE5"/>
+      <text x="12" y="16" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">3</text>
+      <text x="30" y="16" font-size="10" font-weight="600" fill="#1E293B">POS 연동 자동화</text>
     </g>
 
-    <!-- Outcome 4 -->
-    <g transform="translate(190, 140)">
-      <rect x="0" y="0" width="155" height="70" rx="8" fill="#FCE7F3"/>
-      <text x="78" y="25" font-size="11" fill="#64748B" text-anchor="middle">매장 평균 매출</text>
-      <text x="78" y="52" font-size="24" font-weight="700" fill="#DB2777" text-anchor="middle">+10~15%</text>
+    <g transform="translate(15, 130)">
+      <circle cx="12" cy="12" r="10" fill="#D1FAE5"/>
+      <text x="12" y="16" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">4</text>
+      <text x="30" y="16" font-size="10" font-weight="600" fill="#1E293B">사용성 평가 (SUS, TAM, NPS)</text>
     </g>
-
-    <line x1="20" y1="225" x2="350" y2="225" stroke="#E2E8F0" stroke-width="1"/>
-
-    <text x="185" y="250" font-size="12" font-weight="600" fill="#1E293B" text-anchor="middle">사장님 경험 변화</text>
-    <text x="185" y="270" font-size="11" fill="#475569" text-anchor="middle">"분석→판단→실행" → "추천→승인"</text>
   </g>
 
-  <!-- Bottom Section: Roadmap -->
-  <g transform="translate(30, 380)">
-    <rect x="0" y="0" width="1140" height="190" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+  <!-- Arrows from Two Paths to Commercialization -->
+  <!-- Upper arrow -->
+  <path d="M 600 160 Q 630 160 640 200 L 660 230" stroke="#8B5CF6" stroke-width="3" fill="none" marker-end="url(#arrowPurple)"/>
+  <!-- Lower arrow -->
+  <path d="M 600 340 Q 630 340 640 300 L 660 270" stroke="#8B5CF6" stroke-width="3" fill="none" marker-end="url(#arrowPurple)"/>
+
+  <!-- Section 3: Product Commercialization -->
+  <g transform="translate(670, 80)">
+    <rect x="0" y="0" width="260" height="340" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="260" height="42" rx="12" fill="url(#purpleGrad)"/>
+    <rect x="0" y="30" width="260" height="12" fill="url(#purpleGrad)"/>
+    <text x="130" y="28" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">제품 상용화</text>
+
+    <text x="130" y="70" font-size="12" font-weight="600" fill="#1E293B" text-anchor="middle">정육점 특화 AI 고객관리 에이전트</text>
+
+    <line x1="20" y1="85" x2="240" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- Expected Outcomes -->
+    <text x="20" y="110" font-size="11" font-weight="600" fill="#7C3AED">예상 성과</text>
+
+    <g transform="translate(20, 120)">
+      <rect x="0" y="0" width="105" height="50" rx="6" fill="#EDE9FE"/>
+      <text x="52" y="20" font-size="10" fill="#64748B" text-anchor="middle">재방문율</text>
+      <text x="52" y="40" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">+15%</text>
+    </g>
+
+    <g transform="translate(135, 120)">
+      <rect x="0" y="0" width="105" height="50" rx="6" fill="#EDE9FE"/>
+      <text x="52" y="20" font-size="10" fill="#64748B" text-anchor="middle">메시지 반응률</text>
+      <text x="52" y="40" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">+20%</text>
+    </g>
+
+    <g transform="translate(20, 180)">
+      <rect x="0" y="0" width="105" height="50" rx="6" fill="#EDE9FE"/>
+      <text x="52" y="20" font-size="10" fill="#64748B" text-anchor="middle">특정부위 매출</text>
+      <text x="52" y="40" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">+10%</text>
+    </g>
+
+    <g transform="translate(135, 180)">
+      <rect x="0" y="0" width="105" height="50" rx="6" fill="#EDE9FE"/>
+      <text x="52" y="20" font-size="10" fill="#64748B" text-anchor="middle">매장 평균 매출</text>
+      <text x="52" y="40" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">+10~15%</text>
+    </g>
+
+    <line x1="20" y1="245" x2="240" y2="245" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- Business Metrics -->
+    <text x="20" y="268" font-size="11" font-weight="600" fill="#7C3AED">사업 지표</text>
+
+    <text x="20" y="290" font-size="10" fill="#64748B">ARPU</text>
+    <text x="100" y="290" font-size="11" font-weight="600" fill="#1E293B">363,000원/월</text>
+
+    <text x="20" y="310" font-size="10" fill="#64748B">CM</text>
+    <text x="100" y="310" font-size="11" font-weight="600" fill="#1E293B">82,000원/월</text>
+
+    <text x="20" y="330" font-size="10" fill="#64748B">BEP</text>
+    <text x="100" y="330" font-size="11" font-weight="600" fill="#1E293B">366개 매장</text>
+  </g>
+
+  <!-- Arrow to Roadmap -->
+  <path d="M 930 250 L 970 250" stroke="#F59E0B" stroke-width="3" fill="none" marker-end="url(#arrowOrange)"/>
+
+  <!-- Section 4: Scale -->
+  <g transform="translate(980, 80)">
+    <rect x="0" y="0" width="190" height="340" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="190" height="42" rx="12" fill="url(#orangeGrad)"/>
+    <rect x="0" y="30" width="190" height="12" fill="url(#orangeGrad)"/>
+    <text x="95" y="28" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">시장 확대</text>
+
+    <!-- Stage indicators -->
+    <g transform="translate(20, 55)">
+      <rect x="0" y="0" width="150" height="65" rx="8" fill="#FEF3C7"/>
+      <text x="75" y="20" font-size="10" font-weight="600" fill="#D97706" text-anchor="middle">2단계: 정식 출시</text>
+      <text x="75" y="38" font-size="9" fill="#64748B" text-anchor="middle">27.11~28.12</text>
+      <text x="75" y="55" font-size="12" font-weight="700" fill="#D97706" text-anchor="middle">300개 / ARR 10억</text>
+    </g>
+
+    <g transform="translate(20, 130)">
+      <rect x="0" y="0" width="150" height="65" rx="8" fill="#FFEDD5"/>
+      <text x="75" y="20" font-size="10" font-weight="600" fill="#EA580C" text-anchor="middle">3단계: 시장 주도</text>
+      <text x="75" y="38" font-size="9" fill="#64748B" text-anchor="middle">29.1~30.12</text>
+      <text x="75" y="55" font-size="12" font-weight="700" fill="#EA580C" text-anchor="middle">3,000개 / ARR 100억</text>
+    </g>
+
+    <g transform="translate(20, 205)">
+      <rect x="0" y="0" width="150" height="65" rx="8" fill="#FEE2E2"/>
+      <text x="75" y="20" font-size="10" font-weight="600" fill="#DC2626" text-anchor="middle">4단계: 산업 확장</text>
+      <text x="75" y="38" font-size="9" fill="#64748B" text-anchor="middle">31.1~</text>
+      <text x="75" y="55" font-size="12" font-weight="700" fill="#DC2626" text-anchor="middle">반찬가게/떡집 진출</text>
+    </g>
+
+    <line x1="20" y1="285" x2="170" y2="285" stroke="#E2E8F0" stroke-width="1"/>
+
+    <text x="95" y="310" font-size="10" fill="#64748B" text-anchor="middle">LTV (36개월)</text>
+    <text x="95" y="330" font-size="14" font-weight="700" fill="#D97706" text-anchor="middle">2,952,000원</text>
+  </g>
+
+  <!-- Bottom Section: Roadmap Timeline -->
+  <g transform="translate(30, 450)">
+    <rect x="0" y="0" width="1140" height="170" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
     <text x="570" y="30" font-size="15" font-weight="700" fill="#1E293B" text-anchor="middle">단계별 로드맵</text>
 
     <!-- Timeline -->
     <line x1="80" y1="80" x2="1060" y2="80" stroke="#E2E8F0" stroke-width="4" stroke-linecap="round"/>
 
     <!-- Stage 1 -->
-    <circle cx="160" cy="80" r="20" fill="#3B82F6"/>
-    <text x="160" y="86" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
-    <text x="160" y="115" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">R&amp;D 개발</text>
-    <text x="160" y="130" font-size="10" fill="#64748B" text-anchor="middle">26.7~27.10</text>
-    <rect x="100" y="145" width="120" height="24" rx="6" fill="#DBEAFE"/>
-    <text x="160" y="162" font-size="10" font-weight="600" fill="#1D4ED8" text-anchor="middle">35개 매장 파일럿</text>
+    <circle cx="180" cy="80" r="20" fill="#3B82F6"/>
+    <text x="180" y="86" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="180" y="115" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">R&amp;D 개발</text>
+    <text x="180" y="130" font-size="10" fill="#64748B" text-anchor="middle">26.7~27.10</text>
+    <rect x="120" y="140" width="120" height="22" rx="6" fill="#DBEAFE"/>
+    <text x="180" y="155" font-size="10" font-weight="600" fill="#1D4ED8" text-anchor="middle">35개 매장 파일럿</text>
 
     <!-- Stage 2 -->
-    <circle cx="400" cy="80" r="20" fill="#10B981"/>
-    <text x="400" y="86" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
-    <text x="400" y="115" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">정식 출시</text>
-    <text x="400" y="130" font-size="10" fill="#64748B" text-anchor="middle">27.11~28.12</text>
-    <rect x="320" y="145" width="70" height="24" rx="6" fill="#D1FAE5"/>
-    <text x="355" y="162" font-size="10" font-weight="600" fill="#059669" text-anchor="middle">300개</text>
-    <rect x="395" y="145" width="90" height="24" rx="6" fill="#059669"/>
-    <text x="440" y="162" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">ARR 10억</text>
+    <circle cx="420" cy="80" r="20" fill="#10B981"/>
+    <text x="420" y="86" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="420" y="115" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">정식 출시</text>
+    <text x="420" y="130" font-size="10" fill="#64748B" text-anchor="middle">27.11~28.12</text>
+    <rect x="350" y="140" width="140" height="22" rx="6" fill="#D1FAE5"/>
+    <text x="420" y="155" font-size="10" font-weight="600" fill="#059669" text-anchor="middle">300개 / ARR 10억</text>
 
     <!-- Stage 3 -->
-    <circle cx="640" cy="80" r="20" fill="#F59E0B"/>
-    <text x="640" y="86" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
-    <text x="640" y="115" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">시장 주도</text>
-    <text x="640" y="130" font-size="10" fill="#64748B" text-anchor="middle">29.1~30.12</text>
-    <rect x="555" y="145" width="80" height="24" rx="6" fill="#FEF3C7"/>
-    <text x="595" y="162" font-size="10" font-weight="600" fill="#D97706" text-anchor="middle">3,000개</text>
-    <rect x="640" y="145" width="90" height="24" rx="6" fill="#D97706"/>
-    <text x="685" y="162" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">ARR 100억</text>
+    <circle cx="660" cy="80" r="20" fill="#F59E0B"/>
+    <text x="660" y="86" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="660" y="115" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">시장 주도</text>
+    <text x="660" y="130" font-size="10" fill="#64748B" text-anchor="middle">29.1~30.12</text>
+    <rect x="580" y="140" width="160" height="22" rx="6" fill="#FEF3C7"/>
+    <text x="660" y="155" font-size="10" font-weight="600" fill="#D97706" text-anchor="middle">3,000개 / ARR 100억</text>
 
     <!-- Stage 4 -->
-    <circle cx="880" cy="80" r="20" fill="#EF4444"/>
-    <text x="880" y="86" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
-    <text x="880" y="115" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">산업 확장</text>
-    <text x="880" y="130" font-size="10" fill="#64748B" text-anchor="middle">31.1~</text>
-    <rect x="810" y="145" width="140" height="24" rx="6" fill="#FEE2E2"/>
-    <text x="880" y="162" font-size="10" font-weight="600" fill="#DC2626" text-anchor="middle">반찬가게/떡집 진출</text>
+    <circle cx="900" cy="80" r="20" fill="#EF4444"/>
+    <text x="900" y="86" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="900" y="115" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">산업 확장</text>
+    <text x="900" y="130" font-size="10" fill="#64748B" text-anchor="middle">31.1~</text>
+    <rect x="830" y="140" width="140" height="22" rx="6" fill="#FEE2E2"/>
+    <text x="900" y="155" font-size="10" font-weight="600" fill="#DC2626" text-anchor="middle">타 산업 진출</text>
 
-    <!-- Final Vision -->
-    <circle cx="1020" cy="80" r="20" fill="#7C3AED"/>
-    <text x="1020" y="75" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">AI</text>
-    <text x="1020" y="90" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">플랫폼</text>
+    <!-- Vision -->
+    <circle cx="1040" cy="80" r="20" fill="#7C3AED"/>
+    <text x="1040" y="75" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">AI</text>
+    <text x="1040" y="88" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">플랫폼</text>
   </g>
 
-  <!-- Bottom: Key Metrics -->
-  <g transform="translate(30, 590)">
+  <!-- Bottom Vision -->
+  <g transform="translate(30, 640)">
     <rect x="0" y="0" width="1140" height="90" rx="12" fill="url(#headerGrad)" filter="url(#shadow)"/>
-
-    <g transform="translate(80, 20)">
-      <text x="0" y="15" font-size="11" fill="#C7D2FE">ARPU</text>
-      <text x="0" y="38" font-size="18" font-weight="700" fill="#FFFFFF">363,000원</text>
-      <text x="0" y="55" font-size="10" fill="#A5B4FC">/월</text>
-    </g>
-
-    <line x1="220" y1="15" x2="220" y2="75" stroke="#6366F1" stroke-width="1"/>
-
-    <g transform="translate(260, 20)">
-      <text x="0" y="15" font-size="11" fill="#C7D2FE">CM (공헌이익)</text>
-      <text x="0" y="38" font-size="18" font-weight="700" fill="#FFFFFF">82,000원</text>
-      <text x="0" y="55" font-size="10" fill="#A5B4FC">/월</text>
-    </g>
-
-    <line x1="420" y1="15" x2="420" y2="75" stroke="#6366F1" stroke-width="1"/>
-
-    <g transform="translate(460, 20)">
-      <text x="0" y="15" font-size="11" fill="#C7D2FE">LTV (36개월)</text>
-      <text x="0" y="38" font-size="18" font-weight="700" fill="#FFFFFF">2,952,000원</text>
-    </g>
-
-    <line x1="630" y1="15" x2="630" y2="75" stroke="#6366F1" stroke-width="1"/>
-
-    <g transform="translate(670, 20)">
-      <text x="0" y="15" font-size="11" fill="#C7D2FE">LTV/CAC</text>
-      <text x="0" y="38" font-size="18" font-weight="700" fill="#FFFFFF">29.5</text>
-    </g>
-
-    <line x1="780" y1="15" x2="780" y2="75" stroke="#6366F1" stroke-width="1"/>
-
-    <g transform="translate(820, 20)">
-      <text x="0" y="15" font-size="11" fill="#C7D2FE">BEP</text>
-      <text x="0" y="38" font-size="18" font-weight="700" fill="#FFFFFF">366개 매장</text>
-    </g>
-
-    <line x1="970" y1="15" x2="970" y2="75" stroke="#6366F1" stroke-width="1"/>
-
-    <g transform="translate(1010, 20)">
-      <text x="0" y="15" font-size="11" fill="#C7D2FE">회수 기간</text>
-      <text x="0" y="38" font-size="18" font-weight="700" fill="#FFFFFF">1.2개월</text>
-    </g>
+    <text x="570" y="35" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">사업화 비전</text>
+    <text x="570" y="60" font-size="13" fill="#E0E7FF" text-anchor="middle">"빠르게 발전하는 AI 환경에서 소외된 소상공인을 위한, 산업별 현장 최적화 AI 고객관리 에이전트"</text>
+    <text x="570" y="80" font-size="11" fill="#C7D2FE" text-anchor="middle">LTV/CAC 29.5 | 고객 회수 기간 1.2개월 | BEP 366개 매장</text>
   </g>
 
 </svg>
