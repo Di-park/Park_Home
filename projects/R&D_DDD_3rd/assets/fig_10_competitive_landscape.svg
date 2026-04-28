@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap');
+    </style>
+    <linearGradient id="bigPlayerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ourGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="650" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="24" font-weight="bold" fill="#1e293b">경쟁 현황 및 시장 기회</text>
+
+  <!-- Section Labels -->
+  <text x="225" y="80" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="16" font-weight="bold" fill="#64748b">대형 사업자 집중 영역</text>
+  <text x="675" y="80" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="16" font-weight="bold" fill="#64748b">구조적 공백 시장</text>
+
+  <!-- Divider Line -->
+  <line x1="450" y1="90" x2="450" y2="480" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- LEFT SIDE: Big Players -->
+  <rect x="30" y="100" width="390" height="160" rx="12" fill="url(#bigPlayerGrad)" filter="url(#shadow)"/>
+  <text x="225" y="130" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="16" font-weight="bold" fill="white">주요 경쟁사</text>
+
+  <!-- Player logos/names -->
+  <rect x="50" y="145" width="80" height="35" rx="6" fill="white" fill-opacity="0.9"/>
+  <text x="90" y="168" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="11" font-weight="bold" fill="#667eea">토스플레이스</text>
+
+  <rect x="140" y="145" width="70" height="35" rx="6" fill="white" fill-opacity="0.9"/>
+  <text x="175" y="168" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="12" font-weight="bold" fill="#667eea">페이히어</text>
+
+  <rect x="220" y="145" width="60" height="35" rx="6" fill="white" fill-opacity="0.9"/>
+  <text x="250" y="168" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="12" font-weight="bold" fill="#667eea">티오더</text>
+
+  <rect x="290" y="145" width="60" height="35" rx="6" fill="white" fill-opacity="0.9"/>
+  <text x="320" y="168" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="12" font-weight="bold" fill="#667eea">네이버</text>
+
+  <rect x="360" y="145" width="50" height="35" rx="6" fill="white" fill-opacity="0.9"/>
+  <text x="385" y="168" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="12" font-weight="bold" fill="#667eea">카카오</text>
+
+  <!-- Focus areas -->
+  <text x="225" y="210" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="13" fill="white">결제 · 주문 · 적립 · 예약</text>
+  <text x="225" y="230" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="13" fill="white">수평적 확장 (범용 기능)</text>
+  <text x="225" y="250" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">플랫폼 의존형 업종 집중</text>
+
+  <!-- Target Market (Left) -->
+  <rect x="30" y="280" width="390" height="120" rx="12" fill="white" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="225" y="310" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="14" font-weight="bold" fill="#475569">주요 타겟 업종</text>
+
+  <!-- Icons for restaurant, cafe, etc -->
+  <g transform="translate(70, 330)">
+    <rect x="0" y="0" width="70" height="50" rx="8" fill="#fef3c7"/>
+    <text x="35" y="30" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="10" fill="#92400e">음식점</text>
+  </g>
+  <g transform="translate(160, 330)">
+    <rect x="0" y="0" width="70" height="50" rx="8" fill="#fef3c7"/>
+    <text x="35" y="30" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="10" fill="#92400e">카페</text>
+  </g>
+  <g transform="translate(250, 330)">
+    <rect x="0" y="0" width="70" height="50" rx="8" fill="#fef3c7"/>
+    <text x="35" y="30" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="10" fill="#92400e">편의점</text>
+  </g>
+
+  <text x="225" y="410" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#94a3b8">배달앱 · 예약플랫폼 의존도 높음</text>
+
+  <!-- RIGHT SIDE: Gap Market -->
+  <rect x="480" y="100" width="390" height="160" rx="12" fill="url(#gapGrad)" filter="url(#shadow)"/>
+  <text x="675" y="130" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="16" font-weight="bold" fill="white">시장 공백</text>
+
+  <text x="675" y="160" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="14" fill="white">대형 사업자 미진출</text>
+  <text x="675" y="185" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="13" fill="rgba(255,255,255,0.9)">플랫폼 비의존형 업종</text>
+  <text x="675" y="210" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="13" fill="rgba(255,255,255,0.9)">POS만 도입, CRM 부재</text>
+
+  <!-- Opportunity highlight -->
+  <rect x="560" y="220" width="230" height="30" rx="15" fill="white" fill-opacity="0.95"/>
+  <text x="675" y="241" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="14" font-weight="bold" fill="#f5576c">진입 우선순위에서 배제</text>
+
+  <!-- Target Market (Right) -->
+  <rect x="480" y="280" width="390" height="120" rx="12" fill="white" stroke="#f5576c" stroke-width="3" filter="url(#shadow)"/>
+  <text x="675" y="310" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="14" font-weight="bold" fill="#475569">타겟 업종 (기회 영역)</text>
+
+  <!-- Icons for butcher, side dish, etc -->
+  <g transform="translate(520, 330)">
+    <rect x="0" y="0" width="80" height="50" rx="8" fill="#fce7f3"/>
+    <text x="40" y="25" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="10" font-weight="bold" fill="#be185d">정육점</text>
+    <text x="40" y="42" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="9" fill="#be185d">5.7만개</text>
+  </g>
+  <g transform="translate(620, 330)">
+    <rect x="0" y="0" width="70" height="50" rx="8" fill="#fce7f3"/>
+    <text x="35" y="30" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="10" fill="#be185d">반찬가게</text>
+  </g>
+  <g transform="translate(710, 330)">
+    <rect x="0" y="0" width="70" height="50" rx="8" fill="#fce7f3"/>
+    <text x="35" y="30" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="10" fill="#be185d">수산시장</text>
+  </g>
+
+  <text x="675" y="410" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#ec4899">단골 기반 · 플랫폼 비의존 · CRM 공백</text>
+
+  <!-- BOTTOM: Our Positioning -->
+  <rect x="150" y="450" width="600" height="130" rx="16" fill="url(#ourGrad)" filter="url(#shadow)"/>
+
+  <!-- Arrow pointing down to our solution -->
+  <path d="M 675 420 L 675 445 L 665 435 M 675 445 L 685 435" stroke="#4facfe" stroke-width="3" fill="none"/>
+
+  <text x="450" y="485" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="18" font-weight="bold" fill="white">우리의 포지셔닝</text>
+
+  <rect x="180" y="500" width="250" height="60" rx="10" fill="white" fill-opacity="0.95"/>
+  <text x="305" y="522" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="12" font-weight="bold" fill="#0891b2">전략: 기존 인프라와 공생</text>
+  <text x="305" y="540" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#475569">POS 대체 X → AI 레이어 추가</text>
+  <text x="305" y="555" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#475569">대형사업자와 직접 경쟁 회피</text>
+
+  <rect x="470" y="500" width="250" height="60" rx="10" fill="white" fill-opacity="0.95"/>
+  <text x="595" y="522" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="12" font-weight="bold" fill="#0891b2">차별화: 도메인 특화 AI</text>
+  <text x="595" y="540" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#475569">이탈예측 · 수요예측 · LLM 개인화</text>
+  <text x="595" y="555" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#475569">정육 유통 전문 데이터 학습</text>
+
+  <!-- Legend -->
+  <rect x="30" y="600" width="15" height="15" rx="3" fill="url(#bigPlayerGrad)"/>
+  <text x="50" y="612" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#64748b">대형 사업자 집중</text>
+
+  <rect x="180" y="600" width="15" height="15" rx="3" fill="url(#gapGrad)"/>
+  <text x="200" y="612" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#64748b">시장 공백 (기회)</text>
+
+  <rect x="330" y="600" width="15" height="15" rx="3" fill="url(#ourGrad)"/>
+  <text x="350" y="612" font-family="'Noto Sans KR', sans-serif" font-size="11" fill="#64748b">우리 솔루션 포지션</text>
+</svg>
