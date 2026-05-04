@@ -14,7 +14,7 @@ const CONFIG = {
   PAYROLL_SHEET_NAME: '이번달 급여정보',                       // 급여대장 시트 탭 이름
   TEMPLATE_SHEET_NAME: '급여명세서_양식',                      // 양식 시트 탭 이름 (자동 생성)
   DRIVE_FOLDER_ID: '1ahK5JPeczmFp8NlYkyXq7_KNBHNzl7_B',       // PDF 저장 드라이브 폴더 ID
-  COMPANY_NAME: '주식회사 파크홈',                              // 회사명 (수정해서 사용)
+  COMPANY_NAME: '주식회사 위브원',                              // 회사명 (수정해서 사용)
   TIMEZONE: 'Asia/Seoul',
 };
 
