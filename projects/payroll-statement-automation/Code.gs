@@ -115,9 +115,8 @@ function fillTemplate(sheet, row, yearMonth) {
 
   // 인적사항
   sheet.getRange('C4').setValue(v(COL.순번));
-  sheet.getRange('F4').setValue(v(COL.부양가족) || 0);
+  sheet.getRange('F4').setValue(CONFIG.COMPANY_NAME);
   sheet.getRange('C5').setValue(v(COL.이름));
-  sheet.getRange('F5').setValue(CONFIG.COMPANY_NAME);
   sheet.getRange('C6').setValue(v(COL.직책) || '');
   sheet.getRange('C7').setValue(formatDate(v(COL.입사일)));
 
@@ -186,12 +185,11 @@ function createTemplateSheetInternal(ss) {
   // 인적사항
   const labelStyle = (range) => range.setFontWeight('bold').setBackground('#e8f0fe').setHorizontalAlignment('center').setVerticalAlignment('middle');
   labelStyle(sheet.getRange('B4')).setValue('사원번호');
-  labelStyle(sheet.getRange('E4')).setValue('부양가족');
+  labelStyle(sheet.getRange('E4')).setValue('회 사 명');
   labelStyle(sheet.getRange('B5')).setValue('성    명');
-  labelStyle(sheet.getRange('E5')).setValue('회 사 명');
   labelStyle(sheet.getRange('B6')).setValue('직    책');
   labelStyle(sheet.getRange('B7')).setValue('입 사 일');
-  sheet.getRange('E6:F7').merge();
+  sheet.getRange('E5:F7').merge();
   for (let r = 4; r <= 7; r++) sheet.setRowHeight(r, 26);
 
   // 지급/공제 섹션 헤더
