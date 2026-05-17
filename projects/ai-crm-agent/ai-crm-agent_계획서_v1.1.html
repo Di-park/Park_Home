@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>��������������������� v1.1 ��� ������������ ������ ������ AI CRM ������ ������ ���������</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">@page { size: A4; margin: 20mm 18mm; }
+body {
+font-family: 'Noto Sans CJK KR', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+font-size: 10.5pt;
+line-height: 1.55;
+color: #1a1a1a;
+max-width: 800px;
+margin: 0 auto;
+padding: 24px;
+}
+h1 { font-size: 20pt; border-bottom: 3px solid #1f3a5f; padding-bottom: 8px; color: #1f3a5f; }
+h2 { font-size: 15pt; border-bottom: 2px solid #2c5282; padding-bottom: 4px; color: #2c5282; margin-top: 28px; }
+h3 { font-size: 13pt; color: #2c5282; margin-top: 22px; }
+h4 { font-size: 11.5pt; color: #2d3748; }
+h5 { font-size: 11pt; color: #2d3748; }
+h6 { font-size: 10.5pt; color: #4a5568; }
+blockquote {
+border-left: 4px solid #3182ce;
+background: #ebf8ff;
+margin: 12px 0;
+padding: 10px 14px;
+color: #2d3748;
+}
+table {
+border-collapse: collapse;
+width: 100%;
+margin: 12px 0;
+font-size: 9.5pt;
+}
+th, td {
+border: 1px solid #cbd5e0;
+padding: 6px 8px;
+vertical-align: top;
+}
+th { background: #edf2f7; font-weight: 600; }
+code, pre {
+font-family: 'D2Coding', 'Noto Sans Mono CJK KR', monospace;
+font-size: 9pt;
+}
+pre {
+background: #f7fafc;
+border: 1px solid #e2e8f0;
+padding: 12px;
+border-radius: 4px;
+overflow-x: auto;
+}
+hr { border: none; border-top: 1px solid #cbd5e0; margin: 24px 0; }
+strong { color: #1a202c; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">��������������������� v1.1 ��� ������������ ������
+������ AI CRM ������ ������ ���������</h1>
+</header>
+<h1 id="연구개발계획서-v1.1">연구개발계획서 (v1.1)</h1>
+<blockquote>
+<p><strong>과제명</strong>: 소상공인 현장 특화 AI CRM 문자 발송 시스템
+개발 — POS 연동형 앱·태블릿 기반 자동 발송 플랫폼 <strong>신청
+사업</strong>: 정부 R&amp;D (IITP·NIPA·중기부 등 별도 사업, 추후 확정)
+<strong>연구 기간</strong>: (추후 기입) <strong>총 연구비</strong>:
+(추후 기입) <strong>주관기관</strong>: 주식회사 위브원
+<strong>연구책임자</strong>: 안동철</p>
+</blockquote>
+<blockquote>
+<p>📎 <strong>본 과제와 자체 R&amp;D의 관계</strong>: 본 과제는
+㈜위브원이 자체 R&amp;D(병행 진행 중인 디딤돌 과제 RS-2026-25594825
+<em>“자가학습형 소상공인 현장 특화 고객관리 AI 에이전트”</em>)로 개발한
+<strong>AI 알고리즘(이탈 예측·수요 신호 감지·LLM 문구 자가정제·Depth
+큐레이션)을 자체 보유 자산으로 탑재</strong>하여, <strong>현장 매장에
+실제로 배포·운영하는 시스템·플랫폼 계층</strong>을 개발하는 과제임. 자체
+R&amp;D는 알고리즘 연구에 한정되며, 본 과제는 <strong>POS 연동 미들웨어
++ 디지털 취약 사용자 UX + 발송 인프라·운영 최적화</strong>에 집중하여
+중복지원 우려를 배제함. 참고자료:
+<code>research/references/2026-04_디딤돌_연구개발계획서_원문정리.md</code></p>
+</blockquote>
+<hr />
+<h2 id="연구과제-개요">1. 연구과제 개요</h2>
+<h3 id="연구-개발의-중요성">1.1 연구 개발의 중요성</h3>
+<h4 id="가.-추진-배경-ai는-있는데-현장에-가-닿지-못함">가. 추진 배경 —
+“AI는 있는데, 현장에 가 닿지 못함”</h4>
+<ul>
+<li>생성형 AI와 머신러닝 기반 고객관리 기술은 이미 실용 수준에
+도달함.</li>
+<li>본 기관(㈜위브원) 또한 자체 R&amp;D를 통해 <strong>소상공인 현장
+데이터 기반 이탈 예측 모형(AUC 0.75)</strong>, LLM 기반 개인화 문구
+자가정제 엔진, 품목 수요 신호 감지 모형 등을 보유 중.</li>
+<li>그러나 이러한 AI 자산이 <strong>실제 매장에서 운영되기 위해서는, “AI
+모델”과는 별개 차원에서 다음 3가지 시스템 계층의 동시 구현이
+필수</strong>:</li>
+</ul>
+<ol type="1">
+<li><strong>POS 데이터 수집·정제 미들웨어</strong> — 매장이 사용 중인
+다양한 POS(키오스크·포스뱅크·OK포스 등)에서 거래·고객·품목 데이터를 표준
+스키마로 자동 수집하는 통합 계층</li>
+<li><strong>디지털 취약 사장님 대상 앱·태블릿 UX</strong> — 50~60대
+자영업자가 학습 부담 없이 “버튼 한 번”으로 사용 가능한 운영자
+인터페이스</li>
+<li><strong>메시지 발송 인프라 및 운영 최적화 엔진</strong> —
+SMS·LMS·카카오 알림톡 통합 발송, 발송 큐·비용 최적화, 메시지
+피로도(message fatigue) 관리, 발송 타이밍 자동 최적화</li>
+</ol>
+<ul>
+<li>본 과제는 위 3개 시스템 계층을 핵심 개발 범위로 정의하고, 자체 보유
+AI 자산을 탑재하여 <strong>“매장에서 실제로 동작하는 AI CRM 문자 발송
+플랫폼”</strong> 의 완성을 최종 목표로 함.</li>
+<li>즉, 본 과제의 결과물은 <em>“AI 모델 그 자체”</em> 가 아니라,
+<strong>AI를 현장으로 전달하는 “시스템·플랫폼”</strong> 임.</li>
+</ul>
+<h4 id="나.-기술적-필요성">나. 기술적 필요성</h4>
+<p><strong>1) POS 통합 미들웨어의 부재 — 데이터가 매장에 갇혀 있는
+구조</strong></p>
+<ul>
+<li>국내 소상공인 매장이 사용하는 POS는
+키오스크·포스뱅크·OK포스·삼성SDS·아임유 등 <strong>10개 이상 사업자가
+파편화된 시장</strong>을 형성하고 있음.</li>
+<li>각 POS마다 (i) 데이터 스키마, (ii) 추출 방식(API·DB 덤프·CSV·로컬
+파일), (iii) 고객 식별자 체계가 상이함.</li>
+<li>결과적으로 AI 솔루션이 아무리 우수해도 <strong>매장의 1차 데이터를
+실시간으로 가져올 표준 경로 자체가 부재</strong>.</li>
+<li>본 기관 자체 R&amp;D 파일럿 단계에서도 사장님이 <strong>월 1회
+수동으로 자료를 제공</strong>해야 하는 한계가 확인되었으며, 이는 데이터
+신선도(freshness) 저하 및 실시간 마케팅 자동화 불가의 직접적
+원인임.</li>
+<li>본 과제는 다양한 POS 사업자 대상 <strong>표준 스키마 자동 매핑·정제
+미들웨어(목표 매핑 정확도 95%)</strong> 를 구현하여 위 구조적 병목을
+해소.</li>
+</ul>
+<p><strong>2) 디지털 취약 사용자 대상 UX의 부재</strong></p>
+<ul>
+<li>소상공인 사장님의 <strong>70% 이상이 50~60대</strong>이며,
+스마트폰·태블릿 기반 디지털 도구의 학습 부담이 마케팅 자동화 솔루션
+도입의 최대 장벽으로 작용 중.</li>
+<li>시중 CRM 솔루션(채널톡·도도포인트·해피포인트 등)은 사무직 데스크탑
+환경을 전제로 설계되어 <strong>현장 즉시 사용 가능한 모바일·태블릿 UX의
+공백이 큼</strong>.</li>
+<li>본 과제는 다음 4가지 UX 원칙 기반의 인터페이스를 설계:
+<ul>
+<li><strong>알림 → 확인 → 승인 → 발송의 4-step 단순 흐름</strong>
+(운영자 의사결정 부담 최소화)</li>
+<li><strong>“왜 이 고객인가” 자연어 설명</strong> (AI 추천 사유를 사장님
+언어로 시각화하여 신뢰도 확보)</li>
+<li><strong>태블릿 매장 디스플레이 + 사장님 스마트폰 앱의 이중
+채널</strong> (영업 중·외 환경 모두 대응)</li>
+<li><strong>고연령 친화 디자인 가이드라인 적용</strong> (글자 크기 16pt
+이상, 색상 대비 4.5:1 이상, 음성 안내 보조)</li>
+</ul></li>
+</ul>
+<p><strong>3) 발송 인프라 및 운영 최적화 엔진의 부재</strong></p>
+<ul>
+<li>문자 마케팅은 단순한 “문자 발송 행위”가 아니라 <strong>채널
+선택(SMS/LMS/알림톡) · 비용 최적화 · 발송 큐 운영 · 피로도 관리 · 타이밍
+최적화</strong> 의 다중 의사결정이 결합된 운영 문제임.</li>
+<li>시중 발송 대행 서비스는 단순 채널 라우팅만 제공하고, <strong>개별
+고객 단위의 피로도·반응성·발송 시점을 통합 최적화하는 운영 엔진은 시장에
+부재</strong>.</li>
+<li>본 과제는 다음 4개 운영 최적화 기능을 시스템 핵심 모듈로 개발:
+<ul>
+<li><strong>채널 자동 라우팅</strong>: 발신자 프로필·수신자 등록
+여부·메시지 길이·비용에 따라 알림톡 → LMS → SMS 자동 폴백</li>
+<li><strong>메시지 피로도 관리</strong>: 고객별 직전 발송 이력·반응
+이력·이탈 위험도를 결합한 <strong>개인별 발송 빈도 상한</strong> 자동
+산출</li>
+<li><strong>발송 타이밍 최적화</strong>: 고객별 과거 응답
+시간대·요일·계절·매장 영업 패턴 기반 <strong>개인 최적 타임슬롯</strong>
+큐 배정</li>
+<li><strong>발송 비용 최적화 대시보드</strong>: 캠페인 단위 채널
+믹스·반응률·ROI 자동 집계</li>
+</ul></li>
+</ul>
+<h4 id="다.-자체-보유-ai-자산과-본-시스템의-시너지">다. 자체 보유 AI
+자산과 본 시스템의 시너지</h4>
+<ul>
+<li>본 기관은 자체 R&amp;D(병행 진행 디딤돌 과제)를 통해 다음 4개 AI
+모듈을 <strong>이미 확보·고도화 중인 자산</strong>으로 보유:</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>자체 보유 AI 자산</th>
+<th>본 시스템에서의 역할</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>① 이탈 예측 RF 복합 모형 (AUC 0.75 검증)</td>
+<td>시스템 데이터 레이어에서 호출 → 사장님 앱의 “이탈 위험 고객 알림”
+화면에 표시</td>
+</tr>
+<tr class="even">
+<td>② 품목 수요 신호 감지 모형 (MAPE 25% 이하 목표)</td>
+<td>“이번 주 판매가 떨어진 품목 + 그 품목을 사가던 고객” 자동 매칭
+결과를 UI에 표시</td>
+</tr>
+<tr class="odd">
+<td>③ LLM 개인화 문구 자가정제 엔진 (오류율 10% 이하)</td>
+<td>발송 인프라에서 호출하여 Depth별 문구 자동 생성, 사장님 검수 화면에
+표출</td>
+</tr>
+<tr class="even">
+<td>④ Depth 큐레이션 모형</td>
+<td>발송 큐의 채널·타이밍·문구 Depth 결정에 입력 신호로 활용</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>본 과제는 위 4개 AI 자산을 <strong>API 형태로 시스템 내부에
+탑재</strong>하고, 그 출력을 <strong>(i) POS 통합 미들웨어 입력으로 수신
+→ (ii) 사장님 UX에서 검수 가능하게 시각화 → (iii) 발송 인프라·운영
+최적화 엔진을 통해 실제 메시지로 전달</strong>하는 End-to-End
+파이프라인을 완성.</li>
+<li>AI 모델 자체의 정확도 개선은 자체 R&amp;D 영역이며, 본 과제는
+<strong>그 모델이 현장에서 동작하도록 만드는 시스템·플랫폼
+계층</strong>에 집중함으로써 자체 R&amp;D와 명확한 경계 및 상호보완
+관계를 유지.</li>
+</ul>
+<h4 id="라.-경제적사회적-필요성">라. 경제적·사회적 필요성</h4>
+<p><strong>1) 경제적 측면</strong></p>
+<ul>
+<li><strong>솔루션 도입 매장 평균 매출 향상 15%</strong> (자체 R&amp;D
+파일럿 기준 추정치 / 본 시스템 30개 매장 실증에서 정량 검증 예정)</li>
+<li><strong>소상공인 마케팅비 절감 50% 이상</strong> — 기존 문자 마케팅
+대행 단가 대비, 발송 인프라 직접 운영·자동 채널 라우팅을 통한 절감</li>
+<li><strong>첫 진입 시장</strong>: 정육점 약 <strong>57,000개소 ·
+2,200억 원</strong> 규모. 대형 플랫폼·대기업 CRM이 진입하지 않은 미개척
+시장</li>
+<li><strong>1차 확장 시장</strong>: 식품 관련 소매·외식 약 <strong>90만
+개 · 1조 원</strong></li>
+<li><strong>최종 목표 시장</strong>: 재방문 기반 B2C 소상공인 약
+<strong>300만 업체 · 7조 원</strong></li>
+</ul>
+<p><strong>2) 사회적 측면</strong></p>
+<ul>
+<li><strong>AI 격차 해소</strong>: AI 모델은 이미 존재하지만 “현장에
+닿지 않던” 구조적 격차를 시스템·UX 계층에서 직접 해소</li>
+<li><strong>디지털 취약산업 포용</strong>: 50~60대 자영업자 대상 UX
+연구를 별도 트랙으로 수행하여 기술 포용(tech inclusion) 실현</li>
+<li><strong>지역 경제 활성화</strong>: 동네 소상공인의 단골 유지율
+향상을 통한 지역 상권 활성화 기여</li>
+<li><strong>국가적 레퍼런스</strong>: 본 시스템 검증 시
+마트·반찬가게·미용·헬스케어 등 인접 오프라인 산업으로 <strong>시스템·UX
+자산 그대로 확장 가능</strong> — 정부 소상공인 디지털 전환 정책(연
+수천억 원·50만 명 목표)의 핵심 인프라로 자리매김</li>
+</ul>
+<h4 id="마.-첫-적용-도메인으로-정육점을-선정한-사유">마. 첫 적용
+도메인으로 정육점을 선정한 사유</h4>
+<p>본 시스템의 첫 적용·실증 도메인을 정육점으로 선정한 사유는 다음과
+같음.</p>
+<ol type="1">
+<li><strong>단골 의존도의 압도적 우위</strong>: 정육점 매출의 70% 이상이
+단골 기반 반복 구매에서 발생 — CRM 시스템 효용이 가장 직접적으로
+검증되는 도메인</li>
+<li><strong>POS 데이터 가용성</strong>: 오프라인 대면 판매·POS 기반
+결제가 주류로 <strong>고객 데이터가 플랫폼(배달앱 등)에 종속되지 않는
+구조</strong> — 본 과제 POS 통합 미들웨어가 정상 동작 가능한 환경</li>
+<li><strong>플랫폼 종속성 부재</strong>: 음식점·카페와 달리 배달앱
+영향이 미미하여 <strong>독립 솔루션의 가치 창출 공간</strong> 확보</li>
+<li><strong>개인화 컨텍스트 다층성</strong>:
+부위·용도·가구단위·계절·명절 등 5개 이상 도메인 축 — 본 시스템에 탑재된
+AI 자산의 표현력이 가장 잘 발현되는 환경</li>
+<li><strong>자체 보유 협력 네트워크</strong>: 연 매출 1,000억 원 규모
+정육 유통사(더담우)와의 협력 MOU 보유 — 시스템 실증 매장 확보 및 확산에
+즉시 활용 가능</li>
+</ol>
+<h4 id="바.-본-연구의-차별적-의의">바. 본 연구의 차별적 의의</h4>
+<ul>
+<li>본 연구의 차별점은 다음 한 줄로 요약:</li>
+</ul>
+<blockquote>
+<p><strong>“AI 모델”이 아니라 “AI를 현장에 가 닿게 하는 시스템”</strong>
+의 개발</p>
+</blockquote>
+<ul>
+<li><p>글로벌 CRM(Salesforce·HubSpot·Braze): 온라인 이벤트 기반, 사무직
+데스크탑 UX, <strong>POS 통합·디지털 취약 UX 부재</strong></p></li>
+<li><p>국내 SMB CRM(채널톡·도도포인트·해피포인트): 멤버십·쿠폰 중심,
+<strong>AI 미탑재, 발송 운영 최적화 부재</strong></p></li>
+<li><p><strong>본 과제</strong>: 다양한 POS 통합 미들웨어 + 디지털 취약
+사장님용 앱/태블릿 UX + 발송 인프라·운영 최적화 엔진 + 자체 보유 AI 자산
+탑재 — <strong>시장 미선점 영역의 4중 결합</strong></p></li>
+<li><p>또한 본 기관이 자체 R&amp;D로 보유한 AI
+자산(이탈예측·수요예측·문구 자가정제·Depth 큐레이션)은 본 시스템 결합 시
+<strong>즉시 차별화 가능한 기보유 자산</strong>이며, 협력사 더담우의
+영업망은 본 시스템 시장 확산 속도에 직접 기여.</p></li>
+</ul>
+<hr />
+<h3 id="연구-개발-대상-기술의-국내외-현황">1.2 연구 개발 대상 기술의
+국내외 현황</h3>
+<p>본 과제의 핵심 요소기술은 AI 모델이 아니라, 그 AI를 매장으로 가 닿게
+하는 <strong>시스템·플랫폼 계층</strong>의 다음 4개 영역임.</p>
+<ul>
+<li><strong>(A) POS 통합 미들웨어</strong> — 다양한 POS 사업자에서
+거래·고객·품목 데이터를 표준 스키마로 자동 수집·정제하는 데이터
+계층</li>
+<li><strong>(B) 디지털 취약 사장님 대상 모바일·태블릿 UX</strong> —
+50~60대 사용자가 학습 부담 없이 사용하는 운영자 인터페이스</li>
+<li><strong>(C) 발송 인프라·운영 최적화 엔진</strong> — SMS·LMS·카카오
+알림톡 통합 발송, 채널 라우팅, 발송 큐, 피로도·타이밍·비용 최적화</li>
+<li><strong>(D) AI 자산 통합 시스템 아키텍처</strong> — 자체 보유 AI
+모델을 API 형태로 탑재하고 운영자 UX·발송 인프라와 연결하는 End-to-End
+파이프라인</li>
+</ul>
+<h4 id="국내외-기술-수준">1.2.1 국내외 기술 수준</h4>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>요소기술</th>
+<th>세계 최고 수준 (해외)</th>
+<th>국내 평균 수준</th>
+<th>본 과제 목표</th>
+<th>격차·진입 전략</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>(A) POS 통합 미들웨어</strong></td>
+<td>Toast·Square·Lightspeed 등 통합 POS-CRM 자체 보유 (북미는 POS 사업자
+자체가 CRM 일체화). 독립 미들웨어는 Toast Partner Ecosystem·Square App
+Marketplace 수준</td>
+<td>도도포인트·테이블링 등이 일부 POS사와 개별 연동, <strong>표준 스키마
+자동 매핑 솔루션 부재</strong></td>
+<td><strong>매핑 정확도 95% (8개 이상 POS 사업자 지원)</strong></td>
+<td>국내 POS 시장 파편화 → 빅테크 비진입 영역, 한국 POS 사업자별 어댑터
++ 표준 정제 레이어로 선점</td>
+</tr>
+<tr class="even">
+<td><strong>(B) 디지털 취약 UX</strong></td>
+<td>Square Dashboard·Toast Now 등 영문권 사장님용 모바일 UX 성숙</td>
+<td>채널톡·도도포인트 등 사무직 데스크탑 전제, <strong>태블릿·고연령
+친화 UX 사례 부재</strong></td>
+<td><strong>SUS(System Usability Scale) 80점 이상, 사장님 1회차 온보딩
+완료율 90%</strong></td>
+<td>한국 50~60대 자영업자 인터뷰·관찰 연구 기반 UX 가이드라인 신규
+정립</td>
+</tr>
+<tr class="odd">
+<td><strong>(C) 발송 인프라·운영 최적화</strong></td>
+<td>Braze · Iterable · Customer.io 등 글로벌 마케팅 자동화 플랫폼이 채널
+라우팅·피로도 관리 기능 보유 (단, 한국 알림톡 미지원)</td>
+<td>비즈엠·알리고·KT BizM 등 발송 대행은 단순 라우팅만 제공,
+<strong>피로도·타이밍·비용 통합 최적화 엔진 부재</strong></td>
+<td><strong>발송 성공률 99% / 채널 비용 자동 절감 30% / 개인별 피로도
+임계 자동 산출</strong></td>
+<td>한국 알림톡 심사 규정 + 통신사 SMS·LMS + 글로벌 마케팅 자동화 운영
+원리를 결합한 한국형 운영 최적화 엔진</td>
+</tr>
+<tr class="even">
+<td><strong>(D) AI 자산 통합 아키텍처</strong></td>
+<td>Salesforce Einstein·HubSpot AI 등이 자사 AI 모델을 시스템에 임베드한
+형태</td>
+<td>본 기관 자체 R&amp;D AI 모델 보유 + 시스템 측 임베드 인프라 자체
+개발 필요</td>
+<td><strong>AI 모듈 API 응답 평균 1.5초 이내, 모듈 4개 통합
+운영</strong></td>
+<td>자체 보유 모델 + 자체 시스템 인프라로 수직 통합 — 외부 의존
+없음</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>격차 분석 요약</strong>: A·B·C 영역 모두 해외에는 일정 수준
+사례가 있으나 <strong>한국 시장 특수성(파편화된 POS, 알림톡 심사, 고연령
+사용자)</strong> 으로 인해 글로벌 솔루션의 직수입이 불가능한 영역임.
+국내에는 부분적 사례만 존재하고 4개 영역을 <strong>수직 통합한 솔루션은
+부재</strong>. 본 과제는 이 통합 영역의 선점을 목표로 함.</p>
+</blockquote>
+<h4 id="국내외-연구산업-동향">1.2.2 국내외 연구·산업 동향</h4>
+<p><strong>1) POS 통합 미들웨어 동향</strong></p>
+<ul>
+<li><strong>해외</strong>: Toast(미국 외식업 POS·CRM 1위), Square,
+Lightspeed 등은 <strong>POS와 CRM을 일체형으로 자체 보유</strong>하는
+구조로 별도 통합 미들웨어 시장이 상대적으로 작음. 다만 Toast Partner
+API·Square App Marketplace는 3rd party 솔루션을 위한 표준 데이터
+인터페이스를 공개하여 미들웨어 사업자가 자생 가능한 생태계 형성 중.</li>
+<li><strong>국내</strong>:
+키오스크·포스뱅크·OK포스·삼성SDS·아임유·KIS정보통신·하이멕스 등
+<strong>10개 이상 POS 사업자</strong>가 시장을 분점하고 있으며,
+<strong>각 POS의 데이터 인터페이스가 표준화되어 있지 않음</strong>.
+산업계에는 도도포인트·테이블링 등이 일부 POS와 개별 연동을 진행 중이나
+“어느 POS든 동일하게 동작하는 통합 미들웨어”는 시장에 부재.</li>
+<li><strong>본 과제 위치</strong>: 첫 출시 시점 8개 이상 주요 POS 어댑터
+확보 + 표준 정제 레이어 구현을 통해 <strong>국내 미선점 영역의 선제
+진입</strong>.</li>
+</ul>
+<p><strong>2) 디지털 취약 사용자 UX 연구 동향</strong></p>
+<ul>
+<li><strong>해외</strong>: HCI(Human-Computer Interaction) 학계에서
+“Older Adults · Aging in Place · Low-literacy Users” 대상 UX 연구가 활발
+(ACM CHI·CSCW 다수 논문). 산업적으로는 Square Dashboard·Toast Now가
+모바일 사장님 UX의 베스트 프랙티스로 인용됨.</li>
+<li><strong>국내</strong>: 정부 디지털 포용 정책 영향으로 공공 서비스
+영역(정부24·건강보험·은행)에서 고연령 UX 가이드라인 일부 등장. 그러나
+<strong>B2B SaaS·CRM 영역에서 고연령 자영업자 대상 UX 연구·표준은 사실상
+부재</strong>.</li>
+<li><strong>본 과제 위치</strong>: 본 기관 자체 R&amp;D 파일럿(정육점
+1개소·실서비스 운영)에서 <strong>사장님 실사용 인터뷰·관찰 데이터
+축적</strong> 중이며, 본 과제에서는 이를 5개 매장 → 30개 매장으로
+확장하여 <strong>한국 정육점·소상공인 도메인 특화 UX
+가이드라인</strong>을 정립. KAIST·서울대 등 학력 기반 UX 연구자(SEO
+CHARLES, ㈜팬블러 PO 출신)를 핵심 인력으로 보유, 학계 표준에 부합하는
+실증 설계 가능.</li>
+</ul>
+<p><strong>3) 발송 인프라·운영 최적화 동향</strong></p>
+<ul>
+<li><strong>해외</strong>: Braze·Iterable·Customer.io·MoEngage 등
+<strong>모바일 마케팅 자동화 플랫폼</strong>은 채널 라우팅, 피로도
+관리(frequency capping), Send Time Optimization(STO), 이탈 예측 연동을
+표준 기능으로 탑재. 그러나 <strong>한국 카카오 알림톡 미지원</strong>,
+비용 구조가 한국 시장과 상이함.</li>
+<li><strong>국내</strong>: 비즈엠·알리고·KT BizM·LG U+ 모바일 등 발송
+대행 사업자는 통신사 SMS·LMS와 알림톡 채널 라우팅의 기본 인프라만
+제공하며, <strong>피로도·타이밍·캠페인 ROI 통합 최적화 운영 엔진은
+미제공</strong>. 카카오 i Connect·NHN INISMS 등도 동일 수준.</li>
+<li><strong>본 과제 위치</strong>: 한국 알림톡 심사 규정 및 통신사
+SMS·LMS 비용 구조를 반영한 <strong>한국형 발송 운영 최적화
+엔진</strong>을 시스템 내부 모듈로 구현. 글로벌 마케팅 자동화 플랫폼의
+운영 원리(STO·frequency capping·channel orchestration)를 한국 시장에
+이식.</li>
+</ul>
+<p><strong>4) AI 모델의 시스템 통합 동향</strong></p>
+<ul>
+<li><strong>해외</strong>: Salesforce Einstein, HubSpot AI, Adobe Sensei
+등 <strong>자사 AI 모델을 자사 CRM 시스템에 임베드</strong>하는 수직
+통합이 일반화. OpenAI API·Anthropic API를 외부에서 호출하는 형태와
+병행.</li>
+<li><strong>국내</strong>: 네이버 클로바·카카오 헤이카카오 등이 자사
+플랫폼에 AI를 임베드. 그러나 <strong>소상공인 CRM 영역에 자체 AI를
+임베드한 사례는 미진</strong>.</li>
+<li><strong>본 과제 위치</strong>: 본 기관 자체 R&amp;D(디딤돌) 보유 AI
+모델을 본 시스템 내부에 <strong>API 형태로 임베드</strong>하여 외부 LLM
+의존도를 낮추고 시스템 응답 속도·비용·보안을 동시 확보. AI 모듈 API 응답
+평균 <strong>1.5초 이내</strong> 목표로 매장 현장 실시간성 보장.</li>
+</ul>
+<h4 id="국내외-시장-현황-및-진입-전략">1.2.3 국내외 시장 현황 및 진입
+전략</h4>
+<p><strong>1) 글로벌 시장</strong></p>
+<ul>
+<li><strong>마케팅 자동화 플랫폼 시장</strong>: 2024년 약 <strong>80억
+달러</strong> → 2030년 <strong>약 200억 달러</strong> 전망 (CAGR 15%
+내외)</li>
+<li><strong>AI 에이전트 시장</strong>: 2026년 76억 달러 → 2034년 2,000억
+달러 전망 — 본 과제의 AI 자산 탑재 구조가 직접 수혜</li>
+<li><strong>POS 통합·SMB 마케팅 시장</strong>: Toast·Square 등 북미 통합
+POS-CRM 시장이 표준화 진행 중. 단, <strong>한국·동남아 등 POS 파편화
+시장은 별도 로컬 플레이어의 기회 영역</strong></li>
+</ul>
+<p><strong>2) 국내 시장</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>시장 구분</th>
+<th>규모</th>
+<th>본 과제 포지셔닝</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>최종 목표: 재방문 기반 B2C 소상공인 CRM 시장</td>
+<td>약 300만 업체 / 약 7조 원</td>
+<td>장기 확장</td>
+</tr>
+<tr class="even">
+<td>1차 확장: 식품 소매·외식</td>
+<td>약 90만 개 / 약 1조 원</td>
+<td>마트·반찬가게·청과 등</td>
+</tr>
+<tr class="odd">
+<td>첫 진입: 정육점</td>
+<td>약 57,000개소 / 약 2,200억 원</td>
+<td><strong>본 과제 실증·상용화 진입 시장</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>시장 견인 요인</strong>:
+<ul>
+<li>정부 소상공인 50만 명 디지털 전환 정책 (연 수천억 원 바우처)</li>
+<li>한국 1인당 정육 소비량 2019년 54.6kg → 2024년 62.9kg 증가세</li>
+<li>카카오 알림톡 발송량 연 30% 이상 성장 (소상공인 활용 증가)</li>
+<li>글로벌 AI 에이전트 시장 폭발적 성장으로 인한 솔루션 수요 증대</li>
+</ul></li>
+</ul>
+<p><strong>3) 경쟁 솔루션 및 본 과제 차별성</strong></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>글로벌 통합형 (Toast·Square·HubSpot)</th>
+<th>국내 SMB CRM (채널톡·도도포인트·해피포인트)</th>
+<th>국내 발송 대행 (비즈엠·알리고·BizM)</th>
+<th><strong>본 과제 (위브원)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>POS 통합</td>
+<td>자체 POS만</td>
+<td>일부 POS 개별 연동</td>
+<td>없음</td>
+<td><strong>8+ POS 표준 매핑 미들웨어</strong></td>
+</tr>
+<tr class="even">
+<td>사장님 UX</td>
+<td>영문권 모바일 UX</td>
+<td>사무직 데스크탑 전제</td>
+<td>발송 콘솔 위주</td>
+<td><strong>태블릿·앱 + 50~60대 친화 UX</strong></td>
+</tr>
+<tr class="odd">
+<td>발송 운영</td>
+<td>글로벌 채널만, 알림톡 미지원</td>
+<td>기본 발송 기능만</td>
+<td>단순 라우팅</td>
+<td><strong>채널 라우팅 + 피로도 + 타이밍 + 비용 통합
+최적화</strong></td>
+</tr>
+<tr class="even">
+<td>AI 탑재</td>
+<td>자사 AI 임베드</td>
+<td>미탑재 또는 단순 룰</td>
+<td>미탑재</td>
+<td><strong>자체 R&amp;D 4개 AI 모듈 API 임베드</strong></td>
+</tr>
+<tr class="odd">
+<td>한국 시장 진입 가능성</td>
+<td>알림톡·POS 파편화로 직진입 어려움</td>
+<td>AI·발송 최적화 부재로 차별성 약함</td>
+<td>운영 최적화 부재로 한계</td>
+<td><strong>4중 결합으로 미선점 영역 전체 차지</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>4) 진입 및 확산 전략</strong></p>
+<ul>
+<li><strong>선점 효과</strong>: 4개 요소(POS 통합·디지털 취약 UX·발송
+최적화·AI 임베드)를 <strong>수직 통합한 솔루션이 국내 시장에
+부재</strong>. 정육점 첫 시장 진입 후 1년 내 표준 솔루션 지위 확보
+목표.</li>
+<li><strong>유통 채널</strong>: 직판 30%, 정육 유통사 파트너십(더담우,
+연 매출 1,000억) 20%, POS사 협업 20%, 조합·협회
+제휴(정육협동조합·한우자조금) 10%, 정부 바우처(소상공인 디지털
+전환·스마트상점 기술보급) 20%</li>
+<li><strong>자체 R&amp;D 시너지</strong>: 자체 R&amp;D(디딤돌)로 AI 모델
+정확도가 향상될수록 본 시스템의 가치가 <strong>외부 추가 비용
+없이</strong> 상승하는 구조 — 본 과제 종료 후에도 자체 R&amp;D 결과가
+시스템에 지속 반영되어 <strong>장기 경쟁우위 유지</strong></li>
+</ul>
+<hr />
+<h3 id="연구과제의-목표-및-내용">1.3 연구과제의 목표 및 내용</h3>
+<h4 id="연구-과제의-최종-목표">1.3.1 연구 과제의 최종 목표</h4>
+<p><strong>1) 한 줄 정의 (Final Goal Statement)</strong></p>
+<blockquote>
+<p>본 과제는 다양한 POS 데이터를 표준 스키마로 자동 수집하는
+<strong>통합 미들웨어</strong>, 50~60대 사장님이 학습 부담 없이 사용하는
+<strong>앱·태블릿 UX</strong>, SMS·LMS·카카오 알림톡 통합 발송 및
+채널·피로도·타이밍·비용을 통합 최적화하는 <strong>발송 인프라 운영
+엔진</strong>, 자체 보유 AI 자산을 임베드한 <strong>AI 자산 통합
+아키텍처</strong> 의 4개 시스템 계층을 개발하고, <strong>정육점 30개
+매장 실사용 환경에서 통합 운영성 및 사업화 가능성을 실증</strong>하는
+것을 최종 목표로 함.</p>
+</blockquote>
+<p><strong>2) 4개 시스템 계층 × 5단계 구조</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>계층</th>
+<th>시스템 모듈</th>
+<th>핵심 산출물</th>
+<th>개발 단계</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>① 데이터</td>
+<td>POS 통합 미들웨어</td>
+<td>8+ POS 어댑터 + 표준 스키마 정제 엔진</td>
+<td>1단계</td>
+</tr>
+<tr class="even">
+<td>② UX</td>
+<td>사장님 앱(iOS/Android) + 매장 태블릿</td>
+<td>4-step 운영 흐름 + 고연령 친화 디자인</td>
+<td>2단계</td>
+</tr>
+<tr class="odd">
+<td>③ 인프라</td>
+<td>발송 운영 최적화 엔진</td>
+<td>채널 라우팅 + 피로도 + 타이밍 + 비용 최적화</td>
+<td>3단계</td>
+</tr>
+<tr class="even">
+<td>④ 통합</td>
+<td>AI 자산 API 임베드 + End-to-End 파이프라인</td>
+<td>4개 AI 모듈 통합·베타 서비스</td>
+<td>4단계</td>
+</tr>
+<tr class="odd">
+<td>통합 실증</td>
+<td>30개 매장 4개월 실사용</td>
+<td>운영성·매출 효과·사업화 가능성 정량 검증</td>
+<td>5단계</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3) 정량적 최종 목표 (TTA 시험성적서 / 자체평가
+기준)</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>번호</th>
+<th>주요 성능지표</th>
+<th>단위</th>
+<th>최종 개발 목표</th>
+<th>기술개발 전 수준</th>
+<th>세계 최고 수준 / 수요처 요구</th>
+<th>비중(%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>POS 데이터 표준 스키마 자동 매핑·정제 정확도</td>
+<td>%</td>
+<td><strong>95</strong></td>
+<td>수동 수집·정제</td>
+<td>글로벌 통합 POS 자체보유 (직접 비교 불가)</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>지원 POS 사업자 수</td>
+<td>개</td>
+<td><strong>8 이상</strong></td>
+<td>1 (자체 R&amp;D 파일럿)</td>
+<td>—</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>운영자 UX 사용성 SUS 점수</td>
+<td>점</td>
+<td><strong>80 이상</strong></td>
+<td>미측정</td>
+<td>글로벌 SaaS 평균 68</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>사장님 1회차 온보딩 완료율</td>
+<td>%</td>
+<td><strong>90 이상</strong></td>
+<td>미측정</td>
+<td>—</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>발송 성공률 (SMS/LMS/알림톡 통합)</td>
+<td>%</td>
+<td><strong>99 이상</strong></td>
+<td>95% (단순 발송 대행)</td>
+<td>글로벌 마케팅 자동화 99~99.5%</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>채널 라우팅 자동 비용 절감률</td>
+<td>%</td>
+<td><strong>30 이상</strong></td>
+<td>0% (수동 채널 선택)</td>
+<td>—</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>AI 모듈 API 응답시간 (P95)</td>
+<td>초</td>
+<td><strong>1.5 이하</strong></td>
+<td>미적용</td>
+<td>OpenAI API 1~3초</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>30개 매장 통합 운영 안정성 (가동률)</td>
+<td>%</td>
+<td><strong>99.5 이상</strong></td>
+<td>—</td>
+<td>AWS SLA 99.9</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>※ TTA 시험성적서: 1·2·3·5·6·7·8번 항목 / 자체평가: 4번 항목 ※ 자체
+R&amp;D(디딤돌) 진행 중인 AI 모델 정확도 지표(AUC·MAPE·오류표현율 등)는
+<strong>본 과제 평가 지표에서 제외</strong>하여 중복지원 논란 차단</p>
+</blockquote>
+<p><strong>4) 단계별 정성·정량 목표</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>기간</th>
+<th>정성 목표</th>
+<th>정량 목표</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1단계: POS 통합 미들웨어 개발</td>
+<td>4개월</td>
+<td>8+ POS 어댑터 + 표준 정제 엔진 + 자동 매핑 검증</td>
+<td>매핑 정확도 ≥ 95%, 지원 POS ≥ 8개</td>
+</tr>
+<tr class="even">
+<td>2단계: 사장님 앱·태블릿 UX 개발</td>
+<td>4개월</td>
+<td>iOS·Android·태블릿 클라이언트 + 4-step 운영 흐름</td>
+<td>SUS ≥ 80, 온보딩 완료율 ≥ 90%</td>
+</tr>
+<tr class="odd">
+<td>3단계: 발송 인프라·운영 최적화 엔진 개발</td>
+<td>3개월</td>
+<td>채널 라우팅 + 피로도 + 타이밍 + 비용 최적화 모듈</td>
+<td>발송 성공률 ≥ 99%, 비용 절감 ≥ 30%</td>
+</tr>
+<tr class="even">
+<td>4단계: AI 자산 통합 + 베타 서비스</td>
+<td>3개월</td>
+<td>자체 R&amp;D 4개 AI 모듈 API 임베드, End-to-End 통합</td>
+<td>AI API 응답 ≤ 1.5초, 베타 5개 매장 안정 운영</td>
+</tr>
+<tr class="odd">
+<td>5단계: 30개 매장 통합 실증</td>
+<td>4개월</td>
+<td>4개월 실사용, 운영성·사업화 정량 검증</td>
+<td>가동률 ≥ 99.5%, 큐레이션 승인율 ≥ 70%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5) 지식재산권 및 사업화 정량 목표</strong></p>
+<ul>
+<li><strong>특허 출원 3건</strong> (본 과제 범위)
+<ol type="1">
+<li>다중 POS 데이터 표준 스키마 자동 매핑·정제 방법 및 미들웨어
+시스템</li>
+<li>디지털 취약 사용자 대상 4-step CRM 운영자 UX 구조 및 모바일·태블릿
+이중 채널 인터페이스 시스템</li>
+<li>카카오 알림톡·SMS·LMS 통합 채널 라우팅과 피로도·타이밍·비용 통합
+최적화 발송 운영 엔진 &gt; (자체 R&amp;D의 AI 알고리즘 특허 3건은 본
+과제 외 자체 보유 IP로 별도 출원 진행 중)</li>
+</ol></li>
+<li><strong>사업화</strong>: 본 과제 종료 시점 30개 매장 실증 완료 → 1년
+내 유료 고객 360개 매장 ARR 13억 → 3년 내 3,000개 매장 ARR 130억</li>
+</ul>
+<hr />
+<h4 id="연구-개발의-세부내용">1.3.2 연구 개발의 세부내용</h4>
+<h5 id="가.-전체-시스템-아키텍처">가. 전체 시스템 아키텍처</h5>
+<ul>
+<li>본 과제의 시스템은 <strong>데이터 → UX → 인프라 → AI 임베드 → 통합
+운영</strong> 의 5계층 구조로 구성.</li>
+<li>각 계층은 독립 모듈로 개발 후 4단계에서 통합되며, 5단계 실증에서
+30개 매장 운영 환경에 배포.</li>
+<li>자체 R&amp;D 보유 AI 모듈(이탈 예측·수요 신호 감지·문구 생성·Depth
+큐레이션)은 <strong>외부 API가 아닌 내부 임베드 모듈</strong>로 시스템에
+통합.</li>
+</ul>
+<pre><code>┌─────────────────────────────────────────────────┐
+│  [매장 POS]   [매장 POS]   [매장 POS]  ... (8+사)  │
+└───────┬───────────┬───────────┬─────────────────┘
+        ▼           ▼           ▼
+   ┌────────────────────────────────────┐
+   │ ① POS 통합 미들웨어                  │
+   │   - POS별 어댑터 (8+개)              │
+   │   - 표준 스키마 자동 매핑·정제          │
+   │   - 데이터 품질 자동 검증              │
+   └─────────────────┬──────────────────┘
+                     ▼
+   ┌────────────────────────────────────┐
+   │ ④ AI 자산 통합 아키텍처 (내부 API)        │
+   │  [자체 R&amp;D 보유 AI 모듈]                │
+   │   - 이탈 예측 │ 수요 신호 │ 문구 생성     │
+   │   - Depth 큐레이션                    │
+   └─────────────────┬──────────────────┘
+                     ▼
+   ┌────────────────────────────────────┐
+   │ ③ 발송 인프라·운영 최적화 엔진             │
+   │   - 채널 라우팅 (알림톡↔LMS↔SMS)        │
+   │   - 메시지 피로도 관리                   │
+   │   - 발송 타이밍 자동 최적화               │
+   │   - 비용 최적화 대시보드                  │
+   └─────────────────┬──────────────────┘
+                     ▼
+   ┌────────────────────────────────────┐
+   │ ② 사장님 앱·태블릿 UX                  │
+   │   - 알림 → 확인 → 승인 → 발송 (4-step)   │
+   │   - &quot;왜 이 고객인가&quot; 자연어 설명           │
+   │   - 매장 태블릿 + 스마트폰 이중 채널        │
+   │   - 고연령 친화 디자인                  │
+   └─────────────────┬──────────────────┘
+                     ▼
+          [고객 SMS/LMS/카카오 알림톡 발송]
+                     │
+                     ▼
+   ┌────────────────────────────────────┐
+   │ ⑤ 통합 운영·실증 (30개 매장 4개월)         │
+   │  - 가동률·운영성 자동 추적                │
+   │  - 매출·재방문·발송 ROI 정량 측정         │
+   └────────────────────────────────────┘</code></pre>
+<h5 id="나.-1단계-pos-통합-미들웨어-개발">나. 1단계 — POS 통합 미들웨어
+개발</h5>
+<ul>
+<li><strong>연구 내용</strong>
+<ol type="1">
+<li><strong>POS 사업자별 데이터 인터페이스 조사·문서화</strong>:
+키오스크·포스뱅크·OK포스·삼성SDS·아임유·KIS정보통신·하이멕스·이지웨이 등
+주요 8개 이상 POS의 데이터 추출 방식(API·로컬 DB·CSV·OSC) 분석</li>
+<li><strong>표준 스키마 설계</strong>: 거래·고객·품목·결제 4개 엔티티의
+표준 스키마 정의 (POS별 컬럼 매핑표 작성)</li>
+<li><strong>데이터 품질 자동 검증 규칙 도출</strong>:
+결측·이상치·중복·식별자 충돌 케이스 정의 및 정제 규칙 수립</li>
+</ol></li>
+<li><strong>기술 개발</strong>
+<ol type="1">
+<li><strong>POS별 어댑터 (8개 이상)</strong> — 각 POS의 인터페이스에
+맞춘 데이터 수집 클라이언트</li>
+<li><strong>표준 스키마 자동 매핑·정제 엔진</strong> — 컬럼명 추론, 단위
+정규화, 고객 식별자 통합, 이상치 자동 처리</li>
+<li><strong>데이터 품질 대시보드</strong> — 매장별 데이터
+신선도·결측률·이상치율 자동 모니터링</li>
+<li><strong>신규 매장 자동 온보딩 파이프라인</strong> — POS 식별 →
+어댑터 자동 선택 → 초기 데이터 적재 → 품질 검증 자동 실행</li>
+</ol></li>
+</ul>
+<h5 id="다.-2단계-사장님-앱태블릿-ux-개발">다. 2단계 — 사장님 앱·태블릿
+UX 개발</h5>
+<ul>
+<li><strong>연구 내용</strong>
+<ol type="1">
+<li><strong>고연령 자영업자 사용성 인터뷰·관찰 연구</strong>: 자체
+R&amp;D 파일럿 매장 + 5개 매장 확장 <strong>사장님 실사용 관찰(매장별
+8시간 이상)</strong>, 사용성 문제 리스트화</li>
+<li><strong>고연령 친화 UX 가이드라인 정립</strong>: 글자 크기·색상
+대비·음성 안내·터치 영역·정보 위계 등 8개 항목 가이드라인 수립</li>
+<li><strong>4-step 운영 흐름 검증 실험</strong>: 알림 → 확인 → 승인 →
+발송의 단순 흐름이 의사결정 부담을 충분히 낮추는지 SUS·NASA-TLX
+측정</li>
+</ol></li>
+<li><strong>기술 개발</strong>
+<ol type="1">
+<li><strong>사장님 모바일 앱 (iOS/Android)</strong> — React Native 기반,
+알림 + 발송 승인 + 결과 확인 기능</li>
+<li><strong>매장 태블릿 앱</strong> — 영업 중 상시 비치용 대화면 UX,
+단골 방문 시 이름·구매 이력 자동 표시</li>
+<li><strong>AI 추천 사유 자연어 설명 모듈</strong> — “왜 이 고객에게
+보내야 하는가” 를 사장님 언어로 자동 설명 (예: <em>“3주째 안 오시던 단골
+분이세요. 평소 삼겹살을 자주 사가셨어요.”</em>)</li>
+<li><strong>고연령 친화 디자인 시스템</strong> — Figma 기반 디자인
+토큰·컴포넌트 라이브러리</li>
+<li><strong>온보딩 워크플로우</strong> — 매장 등록·POS 연결·초기 고객
+데이터 확인까지 자동 가이드</li>
+</ol></li>
+</ul>
+<h5 id="라.-3단계-발송-인프라운영-최적화-엔진-개발">라. 3단계 — 발송
+인프라·운영 최적화 엔진 개발</h5>
+<ul>
+<li><strong>연구 내용</strong>
+<ol type="1">
+<li><strong>카카오 알림톡 심사 규정·통신사 SMS·LMS 단가·발송 시간 제약
+정리</strong>: 한국 시장 특수 규제·비용 구조 매핑</li>
+<li><strong>메시지 피로도(message fatigue) 모델 설계</strong>: 고객별
+직전 발송 이력·반응 이력·이탈 위험도를 결합한 <strong>개인별 발송 빈도
+상한</strong> 자동 산출 규칙</li>
+<li><strong>개인 최적 타임슬롯(Send Time Optimization) 모델
+설계</strong>: 고객별 과거 응답 시간대·요일·계절·매장 영업 패턴
+결합</li>
+</ol></li>
+<li><strong>기술 개발</strong>
+<ol type="1">
+<li><strong>채널 자동 라우팅 모듈</strong> — 발신자 프로필·수신자
+등록·메시지 길이·비용·심사 통과율을 종합한 알림톡 → LMS → SMS 자동
+폴백</li>
+<li><strong>발송 큐 시스템</strong> — 분산 큐(Redis/Kafka 기반) +
+우선순위 + 재시도 + 실패 알림</li>
+<li><strong>피로도 관리 엔진</strong> — 고객별 임계 자동 산출, 초과 발송
+자동 차단</li>
+<li><strong>타이밍 최적화 엔진</strong> — 개인 최적 타임슬롯 큐 배정,
+매장 영업시간 준수</li>
+<li><strong>비용 최적화 대시보드</strong> — 캠페인 단위 채널
+믹스·반응률·ROI·예상 비용 자동 집계</li>
+<li><strong>발송 성공률·실패 분석 모니터링</strong> — 채널별 성공률·실패
+사유 자동 집계</li>
+</ol></li>
+</ul>
+<h5 id="마.-4단계-ai-자산-통합-베타-서비스">마. 4단계 — AI 자산 통합 +
+베타 서비스</h5>
+<ul>
+<li><strong>연구 내용</strong>
+<ol type="1">
+<li><strong>AI 자산 API 인터페이스 설계</strong>: 자체 R&amp;D 보유 4개
+AI 모듈(이탈 예측·수요 신호·문구 생성·Depth 큐레이션)을 시스템 내부
+API로 노출하는 인터페이스 명세 작성</li>
+<li><strong>End-to-End 데이터 흐름 검증</strong>: POS 데이터 → AI 모듈 →
+UX 화면 → 발송 인프라 → 발송 이력 → 매장 데이터로 환류되는 전체 흐름
+점검</li>
+<li><strong>시스템 응답 성능 최적화</strong>: AI 모듈 API 응답 P95 1.5초
+이내 달성을 위한 캐싱·배치·비동기 처리 설계</li>
+</ol></li>
+<li><strong>기술 개발</strong>
+<ol type="1">
+<li><strong>AI 모듈 임베드 게이트웨이</strong> — 자체 R&amp;D 모듈을
+내부 마이크로서비스로 배포·호출, 인증·로깅·모니터링 일체화</li>
+<li><strong>End-to-End 통합 파이프라인</strong> — POS → AI → UX → 발송의
+단일 데이터 흐름 + 발송 결과의 AI 측 환류</li>
+<li><strong>베타 서비스 운영 환경</strong> — 5개 매장 대상 베타 배포,
+24/7 운영 모니터링, 장애 알림</li>
+<li><strong>다중 매장 운영 콘솔</strong> — 본 기관 운영자(CS·기술팀)가
+30개 매장 전체를 한 화면에서 관리</li>
+</ol></li>
+</ul>
+<h5 id="바.-5단계-30개-매장-통합-실증">바. 5단계 — 30개 매장 통합
+실증</h5>
+<ul>
+<li><strong>연구 내용</strong>
+<ol type="1">
+<li><strong>실증 환경 구축</strong>: 30개 매장 순차 온보딩, POS 어댑터
+8종 이상에서 발생하는 실제 데이터 처리 검증</li>
+<li><strong>운영성 정량 측정</strong>: 시스템 가동률·발송 성공률·평균
+응답시간 등 시스템 측 KPI 자동 수집</li>
+<li><strong>사업화 가능성 정량 측정</strong>: 매장별 발송 ROI(매출
+변화·재방문 변화·마케팅 비용 절감)·운영자 만족도(SUS·NPS)·큐레이션
+승인율 측정</li>
+<li><strong>사용성 보조 분석</strong>: 4개월간 사장님 행동 로그 분석을
+통한 UX 개선점 도출</li>
+</ol></li>
+<li><strong>기술 개발</strong>
+<ol type="1">
+<li><strong>30개 매장 통합 배포 파이프라인</strong> — 신규 매장 온보딩
+자동화, 환경 분리·롤백 지원</li>
+<li><strong>운영성 자동 추적 대시보드</strong> — 매장별·시스템 모듈별
+KPI 실시간 시각화</li>
+<li><strong>사업화 지표 자동 집계 시스템</strong> — 매출·재방문·발송 ROI
+자동 산출</li>
+<li><strong>장애 대응·롤백 시스템</strong> — 실증 기간 중 시스템 장애
+발생 시 자동 롤백·복구</li>
+</ol></li>
+</ul>
+<h5 id="사.-단계별-주요-결과물">사. 단계별 주요 결과물</h5>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>주요 결과물</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>POS 8+ 어댑터 / 표준 스키마 정제 엔진 / 데이터 품질 대시보드 / 신규
+매장 온보딩 파이프라인</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>iOS·Android 사장님 앱 / 매장 태블릿 앱 / 고연령 친화 디자인 시스템 /
+AI 추천 사유 자연어 설명 모듈</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>채널 자동 라우팅 / 발송 큐 / 피로도 관리 엔진 / 타이밍 최적화 엔진 /
+비용 최적화 대시보드</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>AI 모듈 임베드 게이트웨이 / End-to-End 통합 파이프라인 / 베타 서비스
+/ 다중 매장 운영 콘솔</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>30개 매장 통합 배포 / 운영성·사업화 KPI 대시보드 / 실증 결과 보고서
+/ TTA 시험성적서</td>
+</tr>
+</tbody>
+</table>
+<h5 id="아.-본-과제의-범위-한정-scope">아. 본 과제의 범위 한정
+(Scope)</h5>
+<ul>
+<li><strong>포함 범위</strong>
+<ol type="1">
+<li>POS 통합 미들웨어 (8개 이상 POS 어댑터 + 표준 스키마 정제)</li>
+<li>사장님 모바일 앱(iOS/Android) + 매장 태블릿 앱 + 고연령 친화 UX
+가이드라인</li>
+<li>SMS/LMS/카카오 알림톡 통합 발송 인프라 + 운영 최적화 엔진 (채널
+라우팅·피로도·타이밍·비용)</li>
+<li>자체 R&amp;D 보유 AI 모듈을 시스템에 임베드하는 통합 아키텍처 및
+운영 환경</li>
+<li>30개 매장 통합 실증 및 사업화 가능성 정량 검증</li>
+</ol></li>
+<li><strong>제외 범위</strong> (자체 R&amp;D 또는 별도 사업 영역)
+<ol type="1">
+<li><strong>AI 알고리즘 자체의 연구·고도화</strong> (이탈 예측·수요 신호
+감지·문구 생성·Depth 큐레이션 모델 자체는 <strong>자체 R&amp;D 디딤돌
+과제 RS-2026-25594825</strong> 에서 진행) — 중복지원 우려 배제</li>
+<li>POS 하드웨어 자체 개발</li>
+<li>결제·재고관리 시스템 신규 구축</li>
+<li>매장 방문객 컴퓨터비전 분석</li>
+<li>정육점 외 도메인의 본격 적용 (2031년 이후 별도 사업)</li>
+</ol></li>
+</ul>
+<hr />
+</body>
+</html>
