@@ -26,8 +26,8 @@
 | PPT 빌더 | `/tmp/butcher-build/make_pptx_v08.py` (python-pptx, ~1400줄) |
 | audit 스크립트 | `/tmp/butcher-build/audit_pptx.py` |
 | 수정 노트 | `/tmp/butcher-build/pptx_revisions.md` (슬라이드별 결정사항) |
-| 마크다운 IR 덱 | `projects/butcher-crm/IR/또와_IR덱_v0.7.md` ✅ 레포 커밋됨 |
-| 사업계획서 | `projects/butcher-crm/단골이_사업계획서_v0.6.md` ⚠️ v0.7 동기화 미완 |
+| 마크다운 IR 덱 | `projects/butcher-crm/IR/또와_IR덱_v0.8.md` ✅ 레포 커밋됨 (16장) |
+| 사업계획서 | `projects/butcher-crm/단골이_사업계획서_v0.6.md` ⚠️ v0.8 동기화 미완 |
 | 디딤돌 R&D 원문 | `research/references/2026-04_디딤돌_연구개발계획서_원문정리.md` (다른 브랜치 origin/claude/ai-crm-rd-plan-yaH7I) |
 | 레포 | `di-park/park_home` · 브랜치 `claude/build-ir-deck-ri0ZR` |
 
@@ -53,25 +53,26 @@ AWS_DARK_NAVY    = #232F3E  # 보조 (돈 흐름·강조 텍스트)
 
 ---
 
-## 4. 15 슬라이드 구성 (현재 v1.1)
+## 4. 16 슬라이드 구성 (현재 v0.8 마크다운 / PPT v1.1은 구버전 15장)
 
 | # | 슬라이드 | 핵심 메시지 |
 |---|---------|-----------|
 | 1 | Cover | 정육점 특화 Zero-Task AI 에이전트 / 단골부터 마진까지 막내 직원 |
-| 2 | One-Liner | 첫 AI 직원 / 0분·0분·**하루 5초** 약속 |
-| 3 | Problem | 매출 70%가 단골인데 사장님은 모름 / 3 문제 |
-| 4 | Solution | 사장님은 눈앞의 손님만 / 효과 3(하루 5초/−50%/+15%) + 기능 3 |
-| 5 | Why Now | AI 도메인 특화 시대 / 소상공인 자리 비어있음 |
-| 6 | Competition | 수직×Zero-Task 빈자리 / 2×2 맵 + 5플레이어 표 |
-| **7** | **Market Insight** | **큰 경쟁자도 못 뚫은 정육점 / "잘 되면 안 바꾼다" / 비용 절감 톤** |
-| 8 | Market | TAM 7조 / SAM 1조 / SOM 2,200억 / Capturable 3→10→20% (Square 벤치마크) |
-| 9 | BM | 5 참여자 BM Flow (정육 도매상 텍스트 메모로 처리) + 3 카드 |
-| 10 | Traction | 5만 거래 / 2,100 단골 / **정직 공개** (효과 미측정) |
-| 11 | Validation | 4 Stage: 가설 검증 → PMF → 공헌이익 양수화 → 시장 확장 / Q 내림차순 |
-| 12 | Team | 5인 카드 + Founder-Market Fit |
-| 13 | Roadmap | 시간선 + 자금 띠 2개 + Series A 진입 조건 |
-| 14 | Ask | Pre-Seed 5억 + R&D 7억 / 자금 4 항목 |
-| 15 | Vision | Mission-driven — *기술 격차 해소 / 정육점은 그 시작* |
+| 2 | One-Liner | **고객관리·마케팅·재고·발주 *스스로 하는* AI 직원** / 0분·0분·주 5초 |
+| 3 | Problem | 매출 70%=단골인데 사장님은 모름 / ①정보 ②신호 **③여유** |
+| 4 | Solution | 사장님은 눈앞의 손님만 / 효과 3(주 5초/−50%/+15%) + 기능 3 |
+| **5** | **🆕 또와가 일하는 모습** | **사장님 + 반투명 고스트 3마리 / 말풍선 3 (단골·재고·이탈)** |
+| 6 | Why Now | AI 도메인 특화 시대 / 소상공인 자리 비어있음 |
+| 7 | Market | TAM 7조 / SAM 1조 / SOM 2,200억 / Capturable 3→10→20% |
+| 8 | Competition | 수직×Zero-Task 빈자리 / 2×2 맵 + **4플레이어**(단체문자 제거) + **정육점 SYSTEM 대리점** |
+| 9 | Market Insight | 큰 경쟁자도 못 뚫은 정육점 / "잘 되면 안 바꾼다" / **전략(메인)+카피(부속) 통합 표** |
+| 10 | BM | 5 참여자 BM Flow + 3 카드 |
+| 11 | Traction | 5만 거래 / 2,100 단골 / *정직 공개*(효과 미측정) |
+| 12 | Validation | 4 Stage: 가설 검증 → PMF → 공헌이익 양수화 → 시장 확장 |
+| 13 | Team | 5인 카드 + Founder-Market Fit |
+| 14 | Roadmap | 시간선 + 자금 띠 2개 + Series A 진입 조건 |
+| 15 | Ask | Pre-Seed 5억 + R&D 7억 / 자금 4 항목 |
+| 16 | Vision | Mission-driven — *기술 격차 해소 / 정육점은 그 시작* |
 
 ---
 
@@ -146,5 +147,5 @@ AWS_DARK_NAVY    = #232F3E  # 보조 (돈 흐름·강조 텍스트)
 
 ---
 
-**마지막 작업 일자**: 2026-05-20
-**마지막 커밋**: `claude/build-ir-deck-ri0ZR` 브랜치, `[v0.7] 또와 IR 덱 최종 정리 — Pre-Seed 5억 + Market Insight 신설`
+**마지막 작업 일자**: 2026-05-21
+**마지막 커밋**: `claude/build-ir-deck-ri0ZR` 브랜치, `[v0.8] 16장 구조 재편 + 컨셉 이미지 슬라이드 신설 + Problem/Competition/Insight 정비`
