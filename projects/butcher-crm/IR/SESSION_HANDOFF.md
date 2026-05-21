@@ -22,12 +22,11 @@
 
 | 항목 | 경로 |
 |------|------|
-| 최신 PPT | `/tmp/butcher-build/또와_IR덱_v1.1_AWS.pptx` (15장, AWS 톤, Noto Sans KR) |
-| PPT 빌더 | `/tmp/butcher-build/make_pptx_v08.py` (python-pptx, ~1400줄) |
-| audit 스크립트 | `/tmp/butcher-build/audit_pptx.py` |
-| 수정 노트 | `/tmp/butcher-build/pptx_revisions.md` (슬라이드별 결정사항) |
-| 마크다운 IR 덱 | `projects/butcher-crm/IR/또와_IR덱_v0.8.md` ✅ 레포 커밋됨 (16장) |
-| 사업계획서 | `projects/butcher-crm/단골이_사업계획서_v0.6.md` ⚠️ v0.8 동기화 미완 |
+| **최신 PPT** | `projects/butcher-crm/IR/pptx/또와_IR덱_v1.2_AWS.pptx` ✅ 레포 커밋됨 (16장, AWS 톤) |
+| **PPT 빌더** | `projects/butcher-crm/IR/pptx/build_또와_ir_v12.py` ✅ 레포 커밋됨 |
+| 마크다운 IR 덱 | `projects/butcher-crm/IR/또와_IR덱_v0.8.md` ✅ (16장) |
+| 사업계획서 | `projects/butcher-crm/또와_사업계획서_v0.7.md` ✅ (v0.8 동기화 완료) |
+| 슬라이드 5 이미지 spec | `projects/butcher-crm/IR/assets/slide5_concept_image_prompt.md` ✅ |
 | 디딤돌 R&D 원문 | `research/references/2026-04_디딤돌_연구개발계획서_원문정리.md` (다른 브랜치 origin/claude/ai-crm-rd-plan-yaH7I) |
 | 레포 | `di-park/park_home` · 브랜치 `claude/build-ir-deck-ri0ZR` |
 
@@ -125,8 +124,8 @@ AWS_DARK_NAVY    = #232F3E  # 보조 (돈 흐름·강조 텍스트)
 
 ## 9. 다음 작업 후보
 
-1. **사업계획서 v0.7 동기화** — IR 덱 v0.7과 일치 (라운드 5억·BM·비전·슬라이드 7 신설 등)
-2. **PPT v1.1 사용자 검증 후 v1.2** — 사용자가 PowerPoint에서 열고 깨진 부분 보고 시
+1. **PPT v1.2 사용자 검증** — 사용자가 PowerPoint에서 열고 깨진 부분 / 카피 / 레이아웃 피드백
+2. **슬라이드 5 컨셉 이미지 실제 생성** — DALL·E 3 / Midjourney v6에 `assets/slide5_concept_image_prompt.md` §6 프롬프트 투입
 3. **TIPS 신청 자료** — 정부 R&D 7억 확보
 4. **파일럿 매장 도입 전/후 매출 측정** (Stage 1 핵심)
 5. **외부 모의 발표 2~3회**
@@ -143,9 +142,9 @@ AWS_DARK_NAVY    = #232F3E  # 보조 (돈 흐름·강조 텍스트)
 
 또는
 
-> "최신 PPT는 `/tmp/butcher-build/또와_IR덱_v1.1_AWS.pptx`이고, 빌더는 `make_pptx_v08.py`. [수정 사항] 반영해서 v1.2 빌드해줘."
+> "PPT 빌더 `projects/butcher-crm/IR/pptx/build_또와_ir_v12.py` 에서 [수정 사항] 반영해서 v1.3 빌드해줘."
 
 ---
 
 **마지막 작업 일자**: 2026-05-21
-**마지막 커밋**: `claude/build-ir-deck-ri0ZR` 브랜치, `[v0.8] 16장 구조 재편 + 컨셉 이미지 슬라이드 신설 + Problem/Competition/Insight 정비`
+**마지막 커밋**: `claude/build-ir-deck-ri0ZR` 브랜치, `[v1.2] PPT 빌더 재구성(16장) + 사업계획서 v0.7 동기화 + 슬라이드 5 이미지 spec`
