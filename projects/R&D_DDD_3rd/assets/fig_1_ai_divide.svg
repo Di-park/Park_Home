@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo','맑은 고딕',sans-serif">
+  <defs>
+    <linearGradient id="topGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="leftGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ECFDF5"/>
+      <stop offset="100%" stop-color="#D1FAE5"/>
+    </linearGradient>
+    <linearGradient id="rightGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEF2F2"/>
+      <stop offset="100%" stop-color="#FEE2E2"/>
+    </linearGradient>
+    <linearGradient id="bottomGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#4B5563"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#DC2626"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="820" fill="#F9FAFB"/>
+
+  <!-- Title -->
+  <text x="600" y="50" font-size="26" font-weight="700" fill="#111827" text-anchor="middle">
+    AI 시대의 혜택 불균형 구조
+  </text>
+  <text x="600" y="80" font-size="15" fill="#6B7280" text-anchor="middle">
+    온라인 지식근로자 집중 vs 오프라인 소상공인 소외
+  </text>
+
+  <!-- TOP: AI Revolution -->
+  <g filter="url(#shadow)">
+    <rect x="350" y="110" width="500" height="90" rx="16" fill="url(#topGrad)"/>
+    <text x="600" y="148" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      생성형 AI 대중화
+    </text>
+    <text x="600" y="178" font-size="15" fill="#E0E7FF" text-anchor="middle">
+      ChatGPT · Claude · Open Claw 등 보편적 생산성 도구로 확산
+    </text>
+  </g>
+
+  <!-- Split lines -->
+  <path d="M 600 200 L 600 240 L 280 240 L 280 270" stroke="#9CA3AF" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 600 200 L 600 240 L 920 240 L 920 270" stroke="#9CA3AF" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- LEFT: Knowledge Workers (Beneficiary) -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="280" width="400" height="360" rx="16" fill="url(#leftGrad)" stroke="#10B981" stroke-width="2.5"/>
+
+    <!-- Check badge -->
+    <circle cx="130" cy="325" r="22" fill="#10B981"/>
+    <text x="130" y="334" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+
+    <text x="170" y="320" font-size="19" font-weight="700" fill="#065F46">AI 수혜자</text>
+    <text x="170" y="342" font-size="14" fill="#047857">Beneficiary</text>
+
+    <!-- Divider -->
+    <line x1="110" y1="370" x2="450" y2="370" stroke="#A7F3D0" stroke-width="1.5"/>
+
+    <text x="130" y="400" font-size="17" font-weight="700" fill="#065F46">온라인·사무직 지식근로자</text>
+
+    <text x="130" y="440" font-size="14" fill="#047857">✓ 업무 자동화 (문서·분석·코딩)</text>
+    <text x="130" y="470" font-size="14" fill="#047857">✓ 영업·마케팅 자동화</text>
+    <text x="130" y="500" font-size="14" fill="#047857">✓ 고객관리 AI 에이전트 위임</text>
+
+    <!-- Quote box -->
+    <rect x="110" y="530" width="340" height="80" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="280" y="560" font-size="13" fill="#065F46" text-anchor="middle" font-style="italic">"누구나 AI로 업무를</text>
+    <text x="280" y="582" font-size="13" fill="#065F46" text-anchor="middle" font-style="italic">자동화할 수 있다"</text>
+    <text x="280" y="600" font-size="11" fill="#6B7280" text-anchor="middle">보편적 생산성 혁명의 수혜</text>
+  </g>
+
+  <!-- RIGHT: Small Business Owners (Excluded) -->
+  <g filter="url(#shadow)">
+    <rect x="720" y="280" width="400" height="360" rx="16" fill="url(#rightGrad)" stroke="#EF4444" stroke-width="2.5"/>
+
+    <!-- X badge -->
+    <circle cx="770" cy="325" r="22" fill="#EF4444"/>
+    <text x="770" y="334" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+
+    <text x="810" y="320" font-size="19" font-weight="700" fill="#991B1B">AI 사각지대</text>
+    <text x="810" y="342" font-size="14" fill="#B91C1C">Excluded</text>
+
+    <!-- Divider -->
+    <line x1="750" y1="370" x2="1090" y2="370" stroke="#FECACA" stroke-width="1.5"/>
+
+    <text x="770" y="400" font-size="17" font-weight="700" fill="#991B1B">오프라인 골목상권 소상공인</text>
+    <text x="770" y="422" font-size="13" fill="#B91C1C">정육점 · 반찬가게 · 동네 카페 · 과일가게</text>
+
+    <text x="770" y="458" font-size="14" fill="#B91C1C">✗ 도입할 시간 부재 (새벽~심야 운영)</text>
+    <text x="770" y="488" font-size="14" fill="#B91C1C">✗ 학습 여력 부재 (1인·소수 인력)</text>
+    <text x="770" y="518" font-size="14" fill="#B91C1C">✗ 업종 맞춤 세팅 지원 부재</text>
+
+    <!-- Quote box -->
+    <rect x="750" y="538" width="340" height="72" rx="10" fill="#FFFFFF" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="920" y="568" font-size="13" fill="#991B1B" text-anchor="middle" font-style="italic">"명제 비적용"</text>
+    <text x="920" y="592" font-size="11" fill="#6B7280" text-anchor="middle">모든 운영 업무를 사장님 개인 역량에 의존</text>
+  </g>
+
+  <!-- VS indicator -->
+  <g>
+    <circle cx="600" cy="460" r="40" fill="#FFFFFF" stroke="#6B7280" stroke-width="2.5"/>
+    <text x="600" y="468" font-size="18" font-weight="700" fill="#6B7280" text-anchor="middle">VS</text>
+  </g>
+
+  <!-- Gap arrow from both sides -->
+  <path d="M 280 660 L 280 700 L 600 700 L 600 720" stroke="#DC2626" stroke-width="2.5" fill="none" marker-end="url(#arrowRed)"/>
+  <path d="M 920 660 L 920 700 L 600 700" stroke="#DC2626" stroke-width="2.5" fill="none"/>
+
+  <!-- BOTTOM: Conclusion -->
+  <g filter="url(#shadow)">
+    <rect x="280" y="725" width="640" height="75" rx="14" fill="url(#bottomGrad)"/>
+    <text x="600" y="758" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      디지털 격차 심화 → 오프라인 소상공인 대상
+    </text>
+    <text x="600" y="784" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      '현장 특화 AI 에이전트' 개발 필요성 도출
+    </text>
+  </g>
+</svg>
