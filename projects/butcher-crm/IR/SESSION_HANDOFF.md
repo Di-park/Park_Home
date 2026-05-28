@@ -22,9 +22,11 @@
 
 | 항목 | 경로 |
 |------|------|
-| **최신 PPT** | `projects/butcher-crm/IR/pptx/또와_IR덱_v1.2_AWS.pptx` ✅ 레포 커밋됨 (16장, AWS 톤) |
-| **PPT 빌더** | `projects/butcher-crm/IR/pptx/build_또와_ir_v12.py` ✅ 레포 커밋됨 |
-| 마크다운 IR 덱 | `projects/butcher-crm/IR/또와_IR덱_v0.8.md` ✅ (16장) |
+| **최신 PPT** | `projects/butcher-crm/IR/pptx/또와_IR덱_v2.0_AWS.pptx` ✅ (17장, 피드백 반영, info-dense) |
+| **최신 PPT 빌더** | `projects/butcher-crm/IR/pptx/build_또와_ir_v20.py` ✅ |
+| **최신 마크다운 IR 덱** | `projects/butcher-crm/IR/또와_IR덱_v2.0.md` ✅ (17장, 투자자 피드백 반영) |
+| 구버전 PPT/빌더 | `또와_IR덱_v1.2_AWS.pptx` / `build_또와_ir_v12.py` (16장, v0.8 기준) |
+| 구버전 마크다운 | `또와_IR덱_v0.8.md` (16장) |
 | 사업계획서 | `projects/butcher-crm/또와_사업계획서_v0.7.md` ✅ (v0.8 동기화 완료) |
 | 슬라이드 5 이미지 spec | `projects/butcher-crm/IR/assets/slide5_concept_image_prompt.md` ✅ |
 | 디딤돌 R&D 원문 | `research/references/2026-04_디딤돌_연구개발계획서_원문정리.md` (다른 브랜치 origin/claude/ai-crm-rd-plan-yaH7I) |
