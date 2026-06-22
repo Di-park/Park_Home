@@ -244,7 +244,9 @@
 
 ### (4) 기술 구현 방안 — 아키텍처 & AI 파이프라인
 
-**(가) 시스템 아키텍처 (개요)**
+**(가) 시스템 아키텍처 (개요)** — *제출용 이미지: `assets/architecture_diagram.png`*
+
+![시스템 아키텍처](assets/architecture_diagram.png)
 
 ```
 [매장 POS] ──거래 데이터──▶ [수집/적재]
